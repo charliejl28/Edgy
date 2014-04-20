@@ -25,7 +25,7 @@
 {
 	self = [super init];
 	if (self ) {
-
+		self.title = @"Events";
 	}
 	return self;
 }

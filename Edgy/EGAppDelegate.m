@@ -7,12 +7,26 @@
 //
 
 #import "EGAppDelegate.h"
+#import "Constants.h"
 
 @implementation EGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+	
+	// view controller
+	self.eventsViewController = [[EventsViewController alloc] init];
+	
+	// nav
+	self.mainNav = [[UINavigationController alloc] initWithRootViewController:self.eventsViewController];
+	self.mainNav.navigationBar.translucent = NO;
+	self.mainNav.navigationBar.barTintColor = edgyBlue;
+	
+	// launch window
+	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	self.window.rootViewController = self.mainNav;
+	[self.window makeKeyAndVisible];
     return YES;
 }
 							

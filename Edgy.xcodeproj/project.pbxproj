@@ -21,6 +21,7 @@
 		CBD889E819034F4D00379E93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD889CA19034F4C00379E93 /* UIKit.framework */; };
 		CBD889F019034F4D00379E93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBD889EE19034F4D00379E93 /* InfoPlist.strings */; };
 		CBD889F219034F4D00379E93 /* EdgyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD889F119034F4D00379E93 /* EdgyTests.m */; };
+		CBD889FF190351FF00379E93 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD889FD190351FF00379E93 /* EventsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,9 @@
 		CBD889ED19034F4D00379E93 /* EdgyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EdgyTests-Info.plist"; sourceTree = "<group>"; };
 		CBD889EF19034F4D00379E93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CBD889F119034F4D00379E93 /* EdgyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EdgyTests.m; sourceTree = "<group>"; };
+		CBD889FB1903517100379E93 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		CBD889FC190351FF00379E93 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		CBD889FD190351FF00379E93 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +116,14 @@
 		CBD889CC19034F4C00379E93 /* Edgy */ = {
 			isa = PBXGroup;
 			children = (
+				CBD889FB1903517100379E93 /* Constants.h */,
 				CBD889D519034F4C00379E93 /* EGAppDelegate.h */,
 				CBD889D619034F4C00379E93 /* EGAppDelegate.m */,
 				CBD889D819034F4C00379E93 /* Main.storyboard */,
 				CBD889DB19034F4C00379E93 /* EGViewController.h */,
 				CBD889DC19034F4C00379E93 /* EGViewController.m */,
+				CBD889FC190351FF00379E93 /* EventsViewController.h */,
+				CBD889FD190351FF00379E93 /* EventsViewController.m */,
 				CBD889DE19034F4C00379E93 /* Images.xcassets */,
 				CBD889CD19034F4C00379E93 /* Supporting Files */,
 			);
@@ -251,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD889DD19034F4C00379E93 /* EGViewController.m in Sources */,
+				CBD889FF190351FF00379E93 /* EventsViewController.m in Sources */,
 				CBD889D719034F4C00379E93 /* EGAppDelegate.m in Sources */,
 				CBD889D319034F4C00379E93 /* main.m in Sources */,
 			);

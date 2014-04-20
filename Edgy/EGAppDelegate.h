@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EventsViewController.h"
 
 @interface EGAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+	
+@property EventsViewController* eventsViewController;
+@property UINavigationController* mainNav;
 
 @end
