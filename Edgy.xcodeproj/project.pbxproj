@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7DB6156A190358E7000F46C0 /* EventsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB61569190358E7000F46C0 /* EventsCell.m */; };
+		7DB6157819035A4D000F46C0 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DB6157419035A4D000F46C0 /* mail.png */; };
+		7DB6157919035A4D000F46C0 /* meetings.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DB6157519035A4D000F46C0 /* meetings.png */; };
+		7DB6157A19035A4D000F46C0 /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DB6157619035A4D000F46C0 /* news.png */; };
+		7DB6157B19035A4D000F46C0 /* notes.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DB6157719035A4D000F46C0 /* notes.png */; };
 		CBD889C719034F4C00379E93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD889C619034F4C00379E93 /* Foundation.framework */; };
 		CBD889C919034F4C00379E93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD889C819034F4C00379E93 /* CoreGraphics.framework */; };
 		CBD889CB19034F4C00379E93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD889CA19034F4C00379E93 /* UIKit.framework */; };
@@ -35,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7DB61568190358E7000F46C0 /* EventsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsCell.h; sourceTree = "<group>"; };
+		7DB61569190358E7000F46C0 /* EventsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsCell.m; sourceTree = "<group>"; };
+		7DB6157419035A4D000F46C0 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
+		7DB6157519035A4D000F46C0 /* meetings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meetings.png; sourceTree = "<group>"; };
+		7DB6157619035A4D000F46C0 /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news.png; sourceTree = "<group>"; };
+		7DB6157719035A4D000F46C0 /* notes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notes.png; sourceTree = "<group>"; };
 		CBD889C319034F4C00379E93 /* Edgy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edgy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD889C619034F4C00379E93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CBD889C819034F4C00379E93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7DB61573190359C7000F46C0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assets;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		CBD889BA19034F4B00379E93 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +135,13 @@
 		CBD889CC19034F4C00379E93 /* Edgy */ = {
 			isa = PBXGroup;
 			children = (
+				7DB6157419035A4D000F46C0 /* mail.png */,
+				7DB6157519035A4D000F46C0 /* meetings.png */,
+				7DB6157619035A4D000F46C0 /* news.png */,
+				7DB6157719035A4D000F46C0 /* notes.png */,
+				7DB61573190359C7000F46C0 /* Assets */,
+				7DB61568190358E7000F46C0 /* EventsCell.h */,
+				7DB61569190358E7000F46C0 /* EventsCell.m */,
 				CBD889FB1903517100379E93 /* Constants.h */,
 				CBD889D519034F4C00379E93 /* EGAppDelegate.h */,
 				CBD889D619034F4C00379E93 /* EGAppDelegate.m */,
@@ -237,7 +263,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD889DF19034F4C00379E93 /* Images.xcassets in Resources */,
+				7DB6157919035A4D000F46C0 /* meetings.png in Resources */,
+				7DB6157A19035A4D000F46C0 /* news.png in Resources */,
 				CBD889D119034F4C00379E93 /* InfoPlist.strings in Resources */,
+				7DB6157B19035A4D000F46C0 /* notes.png in Resources */,
+				7DB6157819035A4D000F46C0 /* mail.png in Resources */,
 				CBD889DA19034F4C00379E93 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +291,7 @@
 				CBD889FF190351FF00379E93 /* EventsViewController.m in Sources */,
 				CBD889D719034F4C00379E93 /* EGAppDelegate.m in Sources */,
 				CBD889D319034F4C00379E93 /* main.m in Sources */,
+				7DB6156A190358E7000F46C0 /* EventsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +500,7 @@
 				CBD889F719034F4D00379E93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBD889F819034F4D00379E93 /* Build configuration list for PBXNativeTarget "EdgyTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +509,7 @@
 				CBD889FA19034F4D00379E93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

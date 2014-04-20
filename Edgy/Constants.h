@@ -12,7 +12,7 @@
 //////// Colors //////////
 # pragma mark - Colors
 #define edgyBlue [UIColor colorWithRed:0.31 green:0.502 blue:0.741 alpha:1.0]
-
+#define edgyBackgroundGray [UIColor colorWithRed:0.98 green:0.98 blue:0.98 alpha:1.0]
 /////// Fonts //////////
 # pragma mark - Fonts
 #define APPFONT @"Avenir"

@@ -7,6 +7,7 @@
 //
 
 #import "EventsViewController.h"
+#import "EventsCell.h"
 #import "Constants.h"
 
 
@@ -30,18 +31,25 @@
 	return self;
 }
 
+- (UIStatusBarStyle) preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setNeedsStatusBarAppearanceUpdate];
+
     // Do any additional setup after loading the view from its nib.
-	
+
 	// Background
-	self.view.backgroundColor  = edgyBlue;
-	
+
 	// Table View
 	self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
 	self.tableView.delegate = self;
 	self.tableView.dataSource = self;
+    self.tableView.backgroundColor = edgyBackgroundGray;
+
 	[self.view addSubview:self.tableView];
 	
 }
@@ -62,22 +70,26 @@
 {
 	return 5;
 }
+
 	
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	static NSString *CellIdentifier = @"Cell";
+    NSString *CellIdentifier = @"EventsCell";
     
-	
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    EventsCell * cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[EventsCell alloc] init];
     }
-	
-	cell.textLabel.text = @"Event!";
-	
+    [cell.title setText:@"Meeting with Daphne"];
+    [cell.views setTitle:@"Mail" forState:UIControlStateNormal];
 	return cell;
 }
-	
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 200;
+}
+
 # pragma mark - Table View Delegate
 
 @end

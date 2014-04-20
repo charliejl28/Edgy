@@ -22,7 +22,11 @@
 	self.mainNav = [[UINavigationController alloc] initWithRootViewController:self.eventsViewController];
 	self.mainNav.navigationBar.translucent = NO;
 	self.mainNav.navigationBar.barTintColor = edgyBlue;
-	
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, [UIFont fontWithName:APPFONT size:16], NSFontAttributeName, nil]];
+   
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+
 	// launch window
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.window.rootViewController = self.mainNav;
