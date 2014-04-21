@@ -45,6 +45,8 @@
 		CBD889F019034F4D00379E93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBD889EE19034F4D00379E93 /* InfoPlist.strings */; };
 		CBD889F219034F4D00379E93 /* EdgyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD889F119034F4D00379E93 /* EdgyTests.m */; };
 		CBD889FF190351FF00379E93 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD889FD190351FF00379E93 /* EventsViewController.m */; };
+		CBFE0C3019056FA7002F8587 /* PeopleListView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBFE0C2F19056FA7002F8587 /* PeopleListView.m */; };
+		CBFE0C341905AC53002F8587 /* EventMeetingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBFE0C331905AC53002F8587 /* EventMeetingsCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,12 +96,12 @@
 		7DB6157619035A4D000F46C0 /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = news.png; path = Edgy/news.png; sourceTree = "<group>"; };
 		7DB6157719035A4D000F46C0 /* notes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = notes.png; path = Edgy/notes.png; sourceTree = "<group>"; };
 		7DB6157C19036946000F46C0 /* meeting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = meeting.png; path = Edgy/meeting.png; sourceTree = "<group>"; };
-		CB1620C41904B6640044BAF3 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventViewController.m; path = Edgy/EventViewController.m; sourceTree = "<group>"; };
-		CB1620C51904B6640044BAF3 /* EventPeopleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventPeopleCell.m; path = Edgy/EventPeopleCell.m; sourceTree = "<group>"; };
-		CB1620C61904B6640044BAF3 /* EventPeopleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventPeopleCell.h; path = Edgy/EventPeopleCell.h; sourceTree = "<group>"; };
-		CB1620C71904B6640044BAF3 /* EventAboutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventAboutCell.m; path = Edgy/EventAboutCell.m; sourceTree = "<group>"; };
-		CB1620C81904B6640044BAF3 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventViewController.h; path = Edgy/EventViewController.h; sourceTree = "<group>"; };
-		CB1620C91904B6640044BAF3 /* EventAboutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventAboutCell.h; path = Edgy/EventAboutCell.h; sourceTree = "<group>"; };
+		CB1620C41904B6640044BAF3 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
+		CB1620C51904B6640044BAF3 /* EventPeopleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventPeopleCell.m; sourceTree = "<group>"; };
+		CB1620C61904B6640044BAF3 /* EventPeopleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventPeopleCell.h; sourceTree = "<group>"; };
+		CB1620C71904B6640044BAF3 /* EventAboutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventAboutCell.m; sourceTree = "<group>"; };
+		CB1620C81904B6640044BAF3 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
+		CB1620C91904B6640044BAF3 /* EventAboutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventAboutCell.h; sourceTree = "<group>"; };
 		CBD889C319034F4C00379E93 /* Edgy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edgy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD889C619034F4C00379E93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CBD889C819034F4C00379E93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,6 +124,10 @@
 		CBD889FB1903517100379E93 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		CBD889FC190351FF00379E93 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		CBD889FD190351FF00379E93 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		CBFE0C2E19056FA7002F8587 /* PeopleListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleListView.h; sourceTree = "<group>"; };
+		CBFE0C2F19056FA7002F8587 /* PeopleListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleListView.m; sourceTree = "<group>"; };
+		CBFE0C321905AC53002F8587 /* EventMeetingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventMeetingsCell.h; sourceTree = "<group>"; };
+		CBFE0C331905AC53002F8587 /* EventMeetingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventMeetingsCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +206,14 @@
 		CBC64A471903843A005CED6E /* Event View */ = {
 			isa = PBXGroup;
 			children = (
+				CB1620C81904B6640044BAF3 /* EventViewController.h */,
+				CB1620C41904B6640044BAF3 /* EventViewController.m */,
+				CB1620C61904B6640044BAF3 /* EventPeopleCell.h */,
+				CB1620C51904B6640044BAF3 /* EventPeopleCell.m */,
+				CB1620C91904B6640044BAF3 /* EventAboutCell.h */,
+				CB1620C71904B6640044BAF3 /* EventAboutCell.m */,
+				CBFE0C321905AC53002F8587 /* EventMeetingsCell.h */,
+				CBFE0C331905AC53002F8587 /* EventMeetingsCell.m */,
 			);
 			name = "Event View";
 			sourceTree = "<group>";
@@ -207,12 +221,6 @@
 		CBD889BA19034F4B00379E93 = {
 			isa = PBXGroup;
 			children = (
-				CB1620C41904B6640044BAF3 /* EventViewController.m */,
-				CB1620C51904B6640044BAF3 /* EventPeopleCell.m */,
-				CB1620C61904B6640044BAF3 /* EventPeopleCell.h */,
-				CB1620C71904B6640044BAF3 /* EventAboutCell.m */,
-				CB1620C81904B6640044BAF3 /* EventViewController.h */,
-				CB1620C91904B6640044BAF3 /* EventAboutCell.h */,
 				CBD889CC19034F4C00379E93 /* Edgy */,
 				CBD889EB19034F4D00379E93 /* EdgyTests */,
 				CBD889C519034F4C00379E93 /* Frameworks */,
@@ -246,15 +254,14 @@
 				7D681F831903823500359535 /* SDWebImage */,
 				7DB61573190359C7000F46C0 /* Assets */,
 				CBD889FB1903517100379E93 /* Constants.h */,
-				7DB61568190358E7000F46C0 /* EventsCell.h */,
-				7DB61569190358E7000F46C0 /* EventsCell.m */,
 				CBD889D519034F4C00379E93 /* EGAppDelegate.h */,
 				CBD889D619034F4C00379E93 /* EGAppDelegate.m */,
 				CBD889D819034F4C00379E93 /* Main.storyboard */,
 				CBD889DB19034F4C00379E93 /* EGViewController.h */,
 				CBD889DC19034F4C00379E93 /* EGViewController.m */,
-				CBD889FC190351FF00379E93 /* EventsViewController.h */,
-				CBD889FD190351FF00379E93 /* EventsViewController.m */,
+				CBFE0C2E19056FA7002F8587 /* PeopleListView.h */,
+				CBFE0C2F19056FA7002F8587 /* PeopleListView.m */,
+				CBFE0C3119056FCE002F8587 /* Events Table */,
 				CBC64A471903843A005CED6E /* Event View */,
 				CBD889DE19034F4C00379E93 /* Images.xcassets */,
 				CBD889CD19034F4C00379E93 /* Supporting Files */,
@@ -289,6 +296,17 @@
 				CBD889EE19034F4D00379E93 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBFE0C3119056FCE002F8587 /* Events Table */ = {
+			isa = PBXGroup;
+			children = (
+				CBD889FC190351FF00379E93 /* EventsViewController.h */,
+				CBD889FD190351FF00379E93 /* EventsViewController.m */,
+				7DB61568190358E7000F46C0 /* EventsCell.h */,
+				7DB61569190358E7000F46C0 /* EventsCell.m */,
+			);
+			name = "Events Table";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +416,7 @@
 				7D681FAD1903823500359535 /* UIImage+WebP.m in Sources */,
 				7D681FA91903823500359535 /* SDWebImagePrefetcher.m in Sources */,
 				CBD889FF190351FF00379E93 /* EventsViewController.m in Sources */,
+				CBFE0C341905AC53002F8587 /* EventMeetingsCell.m in Sources */,
 				7D681FA51903823500359535 /* SDWebImageDecoder.m in Sources */,
 				7D681FA61903823500359535 /* SDWebImageDownloader.m in Sources */,
 				CB1620CC1904B6650044BAF3 /* EventAboutCell.m in Sources */,
@@ -409,6 +428,7 @@
 				CBD889D319034F4C00379E93 /* main.m in Sources */,
 				7D681FA71903823500359535 /* SDWebImageDownloaderOperation.m in Sources */,
 				7D681FAB1903823500359535 /* UIImage+GIF.m in Sources */,
+				CBFE0C3019056FA7002F8587 /* PeopleListView.m in Sources */,
 				CB1620CB1904B6650044BAF3 /* EventPeopleCell.m in Sources */,
 				7D681FA41903823500359535 /* SDWebImageCompat.m in Sources */,
 				7D681FA21903823500359535 /* NSData+ImageContentType.m in Sources */,
