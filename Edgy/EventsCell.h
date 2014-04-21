@@ -8,15 +8,26 @@
 
 @interface EventsCell : UITableViewCell
 
-@property (nonatomic, retain) IBOutlet UIImageView *meetingView;
-//@property (nonatomic, retain) IBOutlet UIView *peopleOuter;
 @property (nonatomic, retain) PeopleListView* peopleListView;
 
-@property (nonatomic, retain) IBOutlet UIImageView *badgeImage;
-@property (nonatomic, retain) IBOutlet UILabel *badgeCount;
+@property (nonatomic, retain) IBOutlet UIImageView *meetingView;
+@property (nonatomic, retain) UIImageView *mailView;
+@property (nonatomic, retain) UIImageView *notesView;
+@property (nonatomic, retain) UIImageView *newsView;
 
-@property (nonatomic, retain) IBOutlet UILabel *title;
-@property (nonatomic, retain) IBOutlet UILabel *location;
+@property (nonatomic, retain)  UIView *peopleOuter;
+
+@property (nonatomic, retain)  UILabel *badgeCountMeeting;
+@property (nonatomic, retain)  UILabel *badgeCountMail;
+@property (nonatomic, retain)  UILabel *badgeCountNote;
+@property (nonatomic, retain)  UILabel *badgeCountNews;
+
+@property (nonatomic, retain)  UILabel *title;
+@property (nonatomic, retain)  UILabel *location;
+
+@property (nonatomic, retain)  UILabel *startTimeLabel;
+@property (nonatomic, retain)  UILabel *durationLabel;
+
 
 
 @property (nonatomic, retain) NSMutableArray *people;
