@@ -22,6 +22,14 @@
 		self.titleLabel.textAlignment = NSTextAlignmentCenter;
 		self.titleLabel.font = [UIFont fontWithName:APPFONT size:16];
 		[self addSubview:self.titleLabel];
+		
+		self.peopleListView = [[PeopleListView alloc] initWithFrame:CGRectMake(20, 55, self.frame.size.width - 10, 45) AndPeopleSize:35];
+		self.peopleListView.horizontalSpacing = 10;
+		NSString *fbID = @"1482513166";
+		[self.peopleListView addPersonForFacebookID:fbID AndName:@"Darshan"];
+		NSString *fbID2 = @"777268569";
+		[self.peopleListView addPersonForFacebookID:fbID2 AndName:@"Charlie"];
+		[self addSubview:self.peopleListView];
     }
     return self;
 }

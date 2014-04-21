@@ -57,7 +57,7 @@ typedef enum {
 	self.tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
 	self.tableView.delegate = self;
 	self.tableView.dataSource = self;
-	self.tableView.backgroundColor = silverColor;
+	self.tableView.backgroundColor = bgColor;
 	[self.view addSubview:self.tableView];
 }
 
@@ -143,12 +143,12 @@ typedef enum {
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-	return 0;
+	return 20;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-	return 20;
+	return 0;
 }
 
 // clear headers and footers

@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PeopleListView.h"
 
 @interface EventPeopleCell : UITableViewCell
 
 @property UILabel* titleLabel;
+
+@property (nonatomic, retain) PeopleListView* peopleListView;
 
 @end
