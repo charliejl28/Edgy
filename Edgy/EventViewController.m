@@ -10,6 +10,7 @@
 #import "Constants.h"
 #import "EventAboutCell.h"
 #import "EventPeopleCell.h"
+#import "EventMeetingsCell.h"
 
 @interface EventViewController ()
 
@@ -103,7 +104,13 @@ typedef enum {
 		}break;
 			
 		case EventTableSectionMeetings:{
+			NSString *CellIdentifier = @"EventMeetingsCell";
 			
+			EventMeetingsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+			if (cell == nil) {
+				cell = [[EventMeetingsCell alloc] init];
+			}
+			return cell;
 		}break;
 			
 		case EventTableSectionMail:{
