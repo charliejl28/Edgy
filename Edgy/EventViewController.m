@@ -9,6 +9,7 @@
 #import "EventViewController.h"
 #import "Constants.h"
 #import "EventAboutCell.h"
+#import "EventPeopleCell.h"
 
 @interface EventViewController ()
 
@@ -19,6 +20,7 @@ typedef enum {
 	EventTableSectionPeople,
 	EventTableSectionMeetings,
 	EventTableSectionMail,
+	EventTableSectionNotes,
 	EventTableSectionNews,
 }EventTableSection;
 
@@ -68,7 +70,7 @@ typedef enum {
 # pragma mark - Table View Data
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-	return 1;
+	return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -79,18 +81,64 @@ typedef enum {
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *CellIdentifier = @"EventAboutCell";
-    
-    EventAboutCell * cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[EventAboutCell alloc] init];
-    }
-	return cell;
+	switch (indexPath.section) {
+		case EventTableSectionAbout:{
+			NSString *CellIdentifier = @"EventAboutCell";
+			
+			EventAboutCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+			if (cell == nil) {
+				cell = [[EventAboutCell alloc] init];
+			}
+			return cell;
+		}break;
+			
+		case EventTableSectionPeople:{
+			NSString *CellIdentifier = @"EventPeopleCell";
+			
+			EventPeopleCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+			if (cell == nil) {
+				cell = [[EventPeopleCell alloc] init];
+			}
+			return cell;
+		}break;
+			
+		case EventTableSectionMeetings:{
+			
+		}break;
+			
+		case EventTableSectionMail:{
+			
+		}break;
+			
+		case EventTableSectionNotes:{
+			
+		}break;
+			
+		case EventTableSectionNews:{
+			
+		}break;
+			
+		default:
+			break;
+	}
+
+	return nil;
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 145;
+	switch (indexPath.section) {
+		case EventTableSectionAbout:
+			return 145;
+			break;
+			
+		case EventTableSectionPeople:
+			return 120;
+			
+		default:
+			break;
+	}
+	return 0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
