@@ -45,10 +45,13 @@
 	// Background
 
 	// Table View
-	self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    CGRect frame = self.view.frame;
+    frame.size.height -= [[self navigationController] navigationBar].frame.size.height + self.navigationController.navigationBar.frame.origin.y;
+    
+	self.tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
 	self.tableView.delegate = self;
 	self.tableView.dataSource = self;
-    self.tableView.backgroundColor = edgyBackgroundGray;
+    self.tableView.backgroundColor = bgColor;
 
 	[self.view addSubview:self.tableView];
 	
@@ -81,13 +84,17 @@
         cell = [[EventsCell alloc] init];
     }
     [cell.title setText:@"Meeting with Daphne"];
-    [cell.views setTitle:@"Mail" forState:UIControlStateNormal];
+    NSString *fbID = @"1482513166";
+    [cell addPersonForFacebookID:fbID AndName:@"Darshan"];
+    NSString *fbID2 = @"777268569";
+    [cell addPersonForFacebookID:fbID2 AndName:@"Charlie"];
+
 	return cell;
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 200;
+    return 175;
 }
 
 # pragma mark - Table View Delegate

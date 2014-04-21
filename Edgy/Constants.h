@@ -13,8 +13,13 @@
 # pragma mark - Colors
 #define edgyBlue [UIColor colorWithRed:0.31 green:0.502 blue:0.741 alpha:1.0]
 #define edgyBackgroundGray [UIColor colorWithRed:0.98 green:0.98 blue:0.98 alpha:1.0]
+#define borderColor [UIColor colorWithRed:0.839 green:0.847 blue:0.859 alpha:1.0]
+#define edgyDarkBlue [UIColor colorWithRed:0.275 green:0.365 blue:0.396 alpha:1.0]
+#define blueColor [UIColor colorWithRed:0.396 green:0.706 blue:0.918 alpha:1.0]
+#define alizarinColor [UIColor colorWithRed:1 green:0.471 blue:0.471 alpha:1.0]
+#define darkGray [UIColor colorWithRed:0.067 green:0.067 blue:0.067 alpha:1.0]
+#define bgColor [UIColor colorWithRed:0.925 green:0.941 blue:0.945 alpha:1.0]
 
-// Flat UI Colors
 #define turquoiseColor [UIColor colorWithRed:0.101961 green:0.737255 blue:0.611765 alpha:1.000000]
 #define emerlandColor [UIColor colorWithRed:0.180392 green:0.800000 blue:0.443137 alpha:1.000000]
 #define peterriverColor [UIColor colorWithRed:0.203922 green:0.596078 blue:0.858824 alpha:1.000000]
@@ -27,7 +32,6 @@
 #define midnightblueColor [UIColor colorWithRed:0.172549 green:0.243137 blue:0.313725 alpha:1.000000]
 #define sunflowerColor [UIColor colorWithRed:0.945098 green:0.768627 blue:0.058824 alpha:1.000000]
 #define carrotColor [UIColor colorWithRed:0.901961 green:0.494118 blue:0.133333 alpha:1.000000]
-#define alizarinColor [UIColor colorWithRed:0.905882 green:0.298039 blue:0.235294 alpha:1.000000]
 #define cloudsColor [UIColor colorWithRed:0.925490 green:0.941176 blue:0.945098 alpha:1.000000]
 #define concreteColor [UIColor colorWithRed:0.584314 green:0.647059 blue:0.650980 alpha:1.000000]
 #define orangeColor [UIColor colorWithRed:0.952941 green:0.611765 blue:0.070588 alpha:1.000000]
