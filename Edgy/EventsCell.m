@@ -9,7 +9,7 @@
 #import "Constants.h"
 
 @implementation EventsCell
-@synthesize title, location, badgeImage, badgeCount, people, peopleOuter;
+@synthesize title, location, badgeImage, badgeCount, people;
 
 float peopleSize = 25;
 
@@ -95,10 +95,13 @@ float peopleSize = 25;
         yPos += locationOuterHeight;
         yPos += 10;
 
-        peopleOuter = [[UIView alloc] initWithFrame:CGRectMake(leftOffset, yPos, self.contentView.bounds.size.width - leftOffset, 30)];
-        [peopleOuter setBackgroundColor:[UIColor clearColor]];
-        [backgroundView addSubview:peopleOuter];
+//        peopleOuter = [[UIView alloc] initWithFrame:CGRectMake(leftOffset, yPos, self.contentView.bounds.size.width - leftOffset, 30)];
+//        [peopleOuter setBackgroundColor:[UIColor clearColor]];
+//        [backgroundView addSubview:peopleOuter];
         
+		self.peopleListView = [[PeopleListView alloc] initWithFrame:CGRectMake(leftOffset, yPos, self.contentView.bounds.size.width - leftOffset, 30)];
+		[backgroundView addSubview:self.peopleListView];
+		
     
         float bottomRowHeight = 50;
         
@@ -132,7 +135,7 @@ float peopleSize = 25;
     
         
         
-        UIView *firstBorder = [[UIView alloc] initWithFrame:CGRectMake(bottomRowCellWidth, 2, 1, bottomRowHeight)];
+        UIView *firstBorder = [[UIView alloc] initWithFrame:CGRectMake(bottomRowCellWidth, 1, 1, bottomRowHeight)];
         [firstBorder setBackgroundColor:borderColor];
         [bottomRow addSubview:firstBorder];
         
@@ -155,7 +158,7 @@ float peopleSize = 25;
         [bottomRow addSubview:mailOuterView];
         
         
-        UIView *secondBorder = [[UIView alloc] initWithFrame:CGRectMake(bottomRowCellWidth * 2, 2, 1, bottomRowHeight)];
+        UIView *secondBorder = [[UIView alloc] initWithFrame:CGRectMake(bottomRowCellWidth * 2, 1, 1, bottomRowHeight)];
         [secondBorder setBackgroundColor:borderColor];
         [bottomRow addSubview:secondBorder];
         
@@ -183,7 +186,7 @@ float peopleSize = 25;
         
         
         
-        UIView *thirdBorder = [[UIView alloc] initWithFrame:CGRectMake(bottomRowCellWidth * 3, 2, 1, bottomRowHeight)];
+        UIView *thirdBorder = [[UIView alloc] initWithFrame:CGRectMake(bottomRowCellWidth * 3, 1, 1, bottomRowHeight)];
         [thirdBorder setBackgroundColor:borderColor];
         [bottomRow addSubview:thirdBorder];
         
@@ -229,20 +232,23 @@ float peopleSize = 25;
 {
     [super setSelected:selected animated:animated];
 }
-
-- (void)addPersonforImage: (UIImageView *)image AndName:(NSString *)firstName{
-    image.frame = CGRectMake(people.count * (peopleSize + 5), 0, peopleSize, peopleSize);
-    [peopleOuter addSubview:image];
-    [people addObject:image];
-}
+//
+//- (void)addPersonforImage: (UIImageView *)image AndName:(NSString *)firstName{
+////    image.frame = CGRectMake(people.count * (peopleSize + 5), 0, peopleSize, peopleSize);
+////    [peopleOuter addSubview:image];
+////    [people addObject:image];
+//
+//}
 
 - (void)addPersonForFacebookID:(NSString *)fbID AndName:(NSString *)firstName{
-    UIImageView *fbPicture = [[UIImageView alloc] init];
-    [fbPicture setImageWithURL: [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=square", fbID]]];
-    fbPicture.clipsToBounds = YES;
-    fbPicture.layer.cornerRadius = peopleSize/2;
+//    UIImageView *fbPicture = [[UIImageView alloc] init];
+//    [fbPicture setImageWithURL: [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=square", fbID]]];
+//    fbPicture.clipsToBounds = YES;
+//    fbPicture.layer.cornerRadius = peopleSize/2;
     
-    [self addPersonforImage:fbPicture AndName:firstName];
+//    [self addPersonforImage:fbPicture AndName:firstName];
+
+	[self.peopleListView addPersonForFacebookID:fbID AndName:firstName];
 }
 
 - (void)setFrame:(CGRect)frame {

@@ -4,10 +4,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PeopleListView.h"
+
 @interface EventsCell : UITableViewCell
 
 @property (nonatomic, retain) IBOutlet UIImageView *meetingView;
-@property (nonatomic, retain) IBOutlet UIView *peopleOuter;
+//@property (nonatomic, retain) IBOutlet UIView *peopleOuter;
+@property (nonatomic, retain) PeopleListView* peopleListView;
 
 @property (nonatomic, retain) IBOutlet UIImageView *badgeImage;
 @property (nonatomic, retain) IBOutlet UILabel *badgeCount;
