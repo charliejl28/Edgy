@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D3729171905AA9D00DF18C4 /* meeting-selected copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D3729161905AA9D00DF18C4 /* meeting-selected copy.png */; };
+		7D3729191905AAD100DF18C4 /* notes-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D3729181905AAD100DF18C4 /* notes-selected.png */; };
 		7D681F54190374C700359535 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D681F53190374C700359535 /* location.png */; };
 		7D681FA11903823500359535 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D681F851903823500359535 /* MKAnnotationView+WebCache.m */; };
 		7D681FA21903823500359535 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D681F871903823500359535 /* NSData+ImageContentType.m */; };
@@ -58,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D3729161905AA9D00DF18C4 /* meeting-selected copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "meeting-selected copy.png"; path = "Edgy/meeting-selected copy.png"; sourceTree = "<group>"; };
+		7D3729181905AAD100DF18C4 /* notes-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "notes-selected.png"; path = "Edgy/notes-selected.png"; sourceTree = "<group>"; };
 		7D681F53190374C700359535 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = location.png; path = Edgy/location.png; sourceTree = "<group>"; };
 		7D681F841903823500359535 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		7D681F851903823500359535 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
@@ -189,6 +193,8 @@
 			children = (
 				7D681F53190374C700359535 /* location.png */,
 				7DB6157C19036946000F46C0 /* meeting.png */,
+				7D3729181905AAD100DF18C4 /* notes-selected.png */,
+				7D3729161905AA9D00DF18C4 /* meeting-selected copy.png */,
 				7DB6157419035A4D000F46C0 /* mail.png */,
 				7DB6157619035A4D000F46C0 /* news.png */,
 				7DB6157719035A4D000F46C0 /* notes.png */,
@@ -369,10 +375,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D681F54190374C700359535 /* location.png in Resources */,
+				7D3729171905AA9D00DF18C4 /* meeting-selected copy.png in Resources */,
 				7DB6157D19036946000F46C0 /* meeting.png in Resources */,
 				CBD889DF19034F4C00379E93 /* Images.xcassets in Resources */,
 				7DB6157A19035A4D000F46C0 /* news.png in Resources */,
 				CBD889D119034F4C00379E93 /* InfoPlist.strings in Resources */,
+				7D3729191905AAD100DF18C4 /* notes-selected.png in Resources */,
 				7DB6157B19035A4D000F46C0 /* notes.png in Resources */,
 				7DB6157819035A4D000F46C0 /* mail.png in Resources */,
 				CBD889DA19034F4C00379E93 /* Main.storyboard in Resources */,

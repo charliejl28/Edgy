@@ -9,7 +9,7 @@
 #import "Constants.h"
 
 @implementation EventsCell
-@synthesize title, location, badgeImage, badgeCount, people, peopleOuter;
+@synthesize title, location, people, peopleOuter, startTimeLabel, durationLabel, meetingView, mailView, notesView, newsView, badgeCountMail, badgeCountMeeting, badgeCountNews, badgeCountNote;
 
 float peopleSize = 25;
 
@@ -32,22 +32,14 @@ float peopleSize = 25;
         float yPos = 5;
         float leftOffset = 100;
         
-        frame = CGRectMake(78, 10, 20, 20);
-        badgeImage = [[UIImageView alloc] initWithFrame:frame];
+     
+
         
-        frame = CGRectMake(78, 10, 20, 20);
-        badgeCount = [[UILabel alloc] initWithFrame:frame];
-        badgeCount.backgroundColor = [UIColor clearColor];
-        badgeCount.textColor = [UIColor whiteColor];
-        badgeCount.textAlignment = NSTextAlignmentCenter;
-        badgeCount.font = [UIFont fontWithName:APPFONT size:13];
-        badgeCount.numberOfLines = 1;
-        badgeCount.adjustsFontSizeToFitWidth = YES;
         
         float labelWidth = 65;
         float labelHeight = 20;
 
-        UILabel *startTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 30, labelWidth, labelHeight)];
+        startTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 30, labelWidth, labelHeight)];
         [startTimeLabel setFont:[UIFont fontWithName:APPFONT size:12]];
         [startTimeLabel setText:@"12:05 PM"];
         [startTimeLabel setBackgroundColor:blueColor];
@@ -55,7 +47,7 @@ float peopleSize = 25;
         [startTimeLabel setTextAlignment:NSTextAlignmentCenter];
         [backgroundView addSubview:startTimeLabel];
     
-        UILabel *durationLabel = [[UILabel alloc] initWithFrame:CGRectMake(startTimeLabel.frame.origin.x, startTimeLabel.frame.origin.y + labelHeight, labelWidth, labelHeight)];
+        durationLabel = [[UILabel alloc] initWithFrame:CGRectMake(startTimeLabel.frame.origin.x, startTimeLabel.frame.origin.y + labelHeight, labelWidth, labelHeight)];
         [durationLabel setFont:[UIFont fontWithName:APPFONT size:10]];
         [durationLabel setText:@"15 Min"];
         [durationLabel setBackgroundColor:[UIColor clearColor]];
@@ -113,7 +105,7 @@ float peopleSize = 25;
         float imageLeftOffset = (bottomRowCellWidth -  imageSize)/2;
         
         UIView *meetingOuterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, bottomRowCellWidth, bottomRowHeight)];
-        UIImageView *meetingView = [[UIImageView alloc] initWithFrame:CGRectMake(imageLeftOffset, topPadding, imageSize, imageSize)];
+        meetingView = [[UIImageView alloc] initWithFrame:CGRectMake(imageLeftOffset, topPadding, imageSize, imageSize)];
         
         UIImage *meetingIcon = [UIImage imageNamed:@"meeting.png"];
         [meetingView setImage:meetingIcon];
@@ -126,8 +118,22 @@ float peopleSize = 25;
         [meetingLabel setTextColor:[UIColor grayColor]];
         [meetingLabel setTextAlignment:NSTextAlignmentCenter];
         [meetingOuterView addSubview:meetingLabel];
-        
         [meetingOuterView addSubview:meetingView];
+
+       
+        frame = CGRectMake(imageLeftOffset + imageSize - 7.5, 5, 15, 15);
+        badgeCountMeeting = [[UILabel alloc] initWithFrame:frame];
+        badgeCountMeeting.backgroundColor = [UIColor redColor];
+        badgeCountMeeting.textColor = [UIColor whiteColor];
+        badgeCountMeeting.textAlignment = NSTextAlignmentCenter;
+        badgeCountMeeting.font = [UIFont fontWithName:APPFONT size:10];
+        badgeCountMeeting.numberOfLines = 1;
+        badgeCountMeeting.adjustsFontSizeToFitWidth = YES;
+        badgeCountMeeting.layer.cornerRadius = 7.5;
+        badgeCountMeeting.clipsToBounds = YES;
+        [badgeCountMeeting setHidden:YES];
+        [meetingOuterView addSubview:badgeCountMeeting];
+        
         [bottomRow addSubview:meetingOuterView];
     
         
@@ -139,7 +145,7 @@ float peopleSize = 25;
 
         
         UIView *mailOuterView = [[UIView alloc] initWithFrame:CGRectMake(bottomRowCellWidth * 1, 0, bottomRowCellWidth, bottomRowHeight)];
-        UIImageView *mailView = [[UIImageView alloc] initWithFrame:CGRectMake(imageLeftOffset, topPadding, imageSize, imageSize)];
+        mailView = [[UIImageView alloc] initWithFrame:CGRectMake(imageLeftOffset, topPadding, imageSize, imageSize)];
         UIImage *mail = [UIImage imageNamed:@"mail.png"];
         [mailView setImage:mail];
         [mailOuterView addSubview:mailView];
@@ -151,6 +157,20 @@ float peopleSize = 25;
         [mailLabel setTextColor:[UIColor grayColor]];
         [mailLabel setTextAlignment:NSTextAlignmentCenter];
         [mailOuterView addSubview:mailLabel];
+        
+        
+        frame = CGRectMake(imageLeftOffset + imageSize - 7.5, 5, 15, 15);
+        badgeCountMail = [[UILabel alloc] initWithFrame:frame];
+        badgeCountMail.backgroundColor = [UIColor redColor];
+        badgeCountMail.textColor = [UIColor whiteColor];
+        badgeCountMail.textAlignment = NSTextAlignmentCenter;
+        badgeCountMail.font = [UIFont fontWithName:APPFONT size:10];
+        badgeCountMail.numberOfLines = 1;
+        badgeCountMail.adjustsFontSizeToFitWidth = YES;
+        badgeCountMail.layer.cornerRadius = 7.5;
+        badgeCountMail.clipsToBounds = YES;
+        [badgeCountMail setHidden:YES];
+        [mailOuterView addSubview:badgeCountMail];
         
         [bottomRow addSubview:mailOuterView];
         
@@ -164,7 +184,7 @@ float peopleSize = 25;
         
         
         UIView *notesOuterView = [[UIView alloc] initWithFrame:CGRectMake(bottomRowCellWidth * 2, 0, bottomRowCellWidth, bottomRowHeight)];
-        UIImageView *notesView = [[UIImageView alloc] initWithFrame:CGRectMake(imageLeftOffset, topPadding, imageSize, imageSize)];
+        notesView = [[UIImageView alloc] initWithFrame:CGRectMake(imageLeftOffset, topPadding, imageSize, imageSize)];
         UIImage *notesIcon = [UIImage imageNamed:@"notes.png"];
         [notesView setImage:notesIcon];
         [notesOuterView addSubview:notesView];
@@ -177,6 +197,19 @@ float peopleSize = 25;
         [notesLabel setTextAlignment:NSTextAlignmentCenter];
         [notesOuterView addSubview:notesLabel];
         
+        
+        frame = CGRectMake(imageLeftOffset + imageSize - 7.5, 5, 15, 15);
+        badgeCountNote = [[UILabel alloc] initWithFrame:frame];
+        badgeCountNote.backgroundColor = [UIColor redColor];
+        badgeCountNote.textColor = [UIColor whiteColor];
+        badgeCountNote.textAlignment = NSTextAlignmentCenter;
+        badgeCountNote.font = [UIFont fontWithName:APPFONT size:10];
+        badgeCountNote.numberOfLines = 1;
+        badgeCountNote.adjustsFontSizeToFitWidth = YES;
+        badgeCountNote.layer.cornerRadius = 7.5;
+        badgeCountNote.clipsToBounds = YES;
+        [badgeCountNote setHidden:YES];
+        [notesOuterView addSubview:badgeCountNote];
         
         [bottomRow addSubview:notesOuterView];
         
@@ -199,7 +232,7 @@ float peopleSize = 25;
     
         
         UIView *newsOuterView = [[UIView alloc] initWithFrame:CGRectMake(bottomRowCellWidth * 3, 0, bottomRowCellWidth, bottomRowHeight)];
-        UIImageView *newsView = [[UIImageView alloc] initWithFrame:CGRectMake(imageLeftOffset, topPadding, imageSize, imageSize)];
+        newsView = [[UIImageView alloc] initWithFrame:CGRectMake(imageLeftOffset, topPadding, imageSize, imageSize)];
         UIImage *newsIcon = [UIImage imageNamed:@"news.png"];
         [newsView setImage:newsIcon];
         [newsOuterView addSubview:newsView];
@@ -212,11 +245,23 @@ float peopleSize = 25;
         [newsLabel setTextAlignment:NSTextAlignmentCenter];
         [newsOuterView addSubview:newsLabel];
         
+        frame = CGRectMake(imageLeftOffset + imageSize - 7.5, 5, 15, 15);
+        badgeCountNews = [[UILabel alloc] initWithFrame:frame];
+        badgeCountNews.backgroundColor = [UIColor redColor];
+        badgeCountNews.textColor = [UIColor whiteColor];
+        badgeCountNews.textAlignment = NSTextAlignmentCenter;
+        badgeCountNews.font = [UIFont fontWithName:APPFONT size:10];
+        badgeCountNews.numberOfLines = 1;
+        badgeCountNews.adjustsFontSizeToFitWidth = YES;
+        badgeCountNews.layer.cornerRadius = 7.5;
+        badgeCountNews.clipsToBounds = YES;
+        [badgeCountNews setHidden:YES];
+        [newsOuterView addSubview:badgeCountNews];
+        
         [bottomRow addSubview:newsOuterView];
 
         [backgroundView addSubview:bottomRow];
 
-        
         [self addSubview:backgroundView];
         
         //[backgroundView addSubview:badgeImage];

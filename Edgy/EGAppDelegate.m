@@ -25,8 +25,11 @@
     self.mainNav.navigationBar.barStyle = UIBarStyleBlack;
 
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, [UIFont fontWithName:APPFONT size:16], NSFontAttributeName, nil]];
+    
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
 	// launch window
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.window.rootViewController = self.mainNav;
