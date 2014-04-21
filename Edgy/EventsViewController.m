@@ -9,7 +9,7 @@
 #import "EventsViewController.h"
 #import "EventsCell.h"
 #import "Constants.h"
-
+#import "EventViewController.h"
 
 @implementation EventsViewController
 
@@ -91,5 +91,11 @@
 }
 
 # pragma mark - Table View Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	EventViewController* eventVC = [[EventViewController alloc] init];
+	[self.navigationController pushViewController:eventVC animated:YES];
+}
 
 @end
