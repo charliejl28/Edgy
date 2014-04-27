@@ -16,9 +16,6 @@ NSString *callback =  @"http://edgyapp.herokuapp.com/auth/google/callback";
 
 NSString *scope = @"https://www.googleapis.com/auth/userinfo.profile+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/calendar+https://www.googleapis.com/auth/drive+https://www.google.com/m8/feeds+https://mail.google.com/";
 
-NSString *visibleactions = @"http://schemas.google.com/AddActivity";
-
-
 @interface LoginViewController ()
 
 @end
@@ -26,26 +23,19 @@ NSString *visibleactions = @"http://schemas.google.com/AddActivity";
 @implementation LoginViewController
 @synthesize webview,isLogin,isReader;
 
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"login view loaded");
     NSString *url = [NSString stringWithFormat:@"https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=%@&redirect_uri=%@&scope=%@",client_id,callback,scope];
-    
+    webview = [[UIWebView alloc] initWithFrame:self.view.frame];
+    webview.delegate = self;
+    [self.view addSubview:webview];
     [webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
-    // [indicator startAnimating];
 }
 
 
 - (BOOL)webView:(UIWebView*)webView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType {
-	
-	NSLog(@"should start load request");
-	
-    //    [indicator startAnimating];
     if ([[[request URL] host] isEqualToString:@"edgyapp.herokuapp.com"]) {
-        
         // Extract oauth_verifier from URL query
         NSString* verifier = nil;
         NSArray* urlParams = [[[request URL] query] componentsSeparatedByString:@"&"];
@@ -60,8 +50,6 @@ NSString *visibleactions = @"http://schemas.google.com/AddActivity";
         }
         
         if (verifier) {
-            
-            
             AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
             NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
             [params setObject:verifier forKey:@"code"];
@@ -70,36 +58,16 @@ NSString *visibleactions = @"http://schemas.google.com/AddActivity";
             [params setObject:secret forKey:@"client_secret"];
             [params setObject:callback forKey:@"redirect_uri"];
             [params setObject:@"authorization_code" forKey:@"grant_type"];
-            /*
-             NSString *fbAccessToken = [[[FBSession activeSession ] accessTokenData] accessToken];
-             
-             
-;
-             
-             //[params setObject:year forKey:@"year"];
-             
-             [params setObject:associations forKey:@"associations"];
-             */
+   
             [manager POST:@"https://accounts.google.com/o/oauth2/token" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
              {
-                 
-                 NSLog(@"JSON: %@", responseObject );
-                 NSLog(@"JSON: %@",  [responseObject objectForKey:@"access_token"] );
-
-                
-                 
-                 
-                 
-                 
-                 
+                NSLog(@"JSON: %@",  [responseObject objectForKey:@"access_token"] );
+        
                  AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
                  NSString *urlString = [NSString stringWithFormat:@"http://edgyapp.herokuapp.com/auth/google-iOS?access_token=%@", [responseObject objectForKey:@"access_token"]];
                  [manager GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
                   {
-                      NSLog(@"JSON: %@", [responseObject objectForKey:@"error"] );
-                      
-                      
-                      
+                      NSLog(@"JSON: %@", [responseObject objectForKey:@"error"]);
                       if ( [responseObject objectForKey:@"error"] == [NSNumber numberWithBool:NO] ){
                           [[NSNotificationCenter defaultCenter] postNotificationName:@"showMainScreen" object:nil];
 
@@ -118,42 +86,25 @@ NSString *visibleactions = @"http://schemas.google.com/AddActivity";
                       NSLog(@"Error: %@", error);
                   }];
                  
-
-                 
-                 
-                 
-                 
-                 
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                
                  NSLog(@"Error: %@", error);
              }];
             
-            
-
-     
-            
-            
-            
-            
-            
         } else {
-            // ERROR!
+
         }
-        
         [webView removeFromSuperview];
-        
         return NO;
     }
     return YES;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
-
 {
     [receivedData appendData:data];
     NSLog(@"verifier %@",receivedData);
 }
+
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
                                                     message:[NSString stringWithFormat:@"%@", error]
@@ -163,8 +114,4 @@ NSString *visibleactions = @"http://schemas.google.com/AddActivity";
     [alert show];
 }
 
-
-
-
 @end
-

@@ -12,7 +12,7 @@
 
 @interface LoginViewController : UIViewController <UIWebViewDelegate>
 {
-    IBOutlet UIWebView *webview;
+    UIWebView *webview;
     NSMutableData *receivedData;
 }
 

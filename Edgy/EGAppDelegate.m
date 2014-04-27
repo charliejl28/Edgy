@@ -19,6 +19,7 @@
 	// view controller
 	self.eventsViewController = [[EventsViewController alloc] init];
     LoginViewController *mvc = [[LoginViewController alloc] init];
+    mvc.delegate = self;
 
 	// nav
 	self.mainNav = [[UINavigationController alloc] initWithRootViewController:mvc];
