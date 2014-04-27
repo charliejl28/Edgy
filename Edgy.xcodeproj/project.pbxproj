@@ -32,6 +32,9 @@
 		CB1620CA1904B6640044BAF3 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1620C41904B6640044BAF3 /* EventViewController.m */; };
 		CB1620CB1904B6650044BAF3 /* EventPeopleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1620C51904B6640044BAF3 /* EventPeopleCell.m */; };
 		CB1620CC1904B6650044BAF3 /* EventAboutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1620C71904B6640044BAF3 /* EventAboutCell.m */; };
+		CB463748190D99CB00F956D7 /* EventMailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB463747190D99CB00F956D7 /* EventMailCell.m */; };
+		CB46374B190D9BB700F956D7 /* EventInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46374A190D9BB700F956D7 /* EventInfoCell.m */; };
+		CB46374E190D9EA600F956D7 /* EventNotesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46374D190D9EA600F956D7 /* EventNotesCell.m */; };
 		CBD889C719034F4C00379E93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD889C619034F4C00379E93 /* Foundation.framework */; };
 		CBD889C919034F4C00379E93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD889C819034F4C00379E93 /* CoreGraphics.framework */; };
 		CBD889CB19034F4C00379E93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD889CA19034F4C00379E93 /* UIKit.framework */; };
@@ -106,6 +109,12 @@
 		CB1620C71904B6640044BAF3 /* EventAboutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventAboutCell.m; sourceTree = "<group>"; };
 		CB1620C81904B6640044BAF3 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
 		CB1620C91904B6640044BAF3 /* EventAboutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventAboutCell.h; sourceTree = "<group>"; };
+		CB463746190D99CB00F956D7 /* EventMailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventMailCell.h; sourceTree = "<group>"; };
+		CB463747190D99CB00F956D7 /* EventMailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventMailCell.m; sourceTree = "<group>"; };
+		CB463749190D9BB700F956D7 /* EventInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventInfoCell.h; sourceTree = "<group>"; };
+		CB46374A190D9BB700F956D7 /* EventInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventInfoCell.m; sourceTree = "<group>"; };
+		CB46374C190D9EA600F956D7 /* EventNotesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventNotesCell.h; sourceTree = "<group>"; };
+		CB46374D190D9EA600F956D7 /* EventNotesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventNotesCell.m; sourceTree = "<group>"; };
 		CBD889C319034F4C00379E93 /* Edgy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edgy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD889C619034F4C00379E93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CBD889C819034F4C00379E93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -214,12 +223,18 @@
 			children = (
 				CB1620C81904B6640044BAF3 /* EventViewController.h */,
 				CB1620C41904B6640044BAF3 /* EventViewController.m */,
+				CB463749190D9BB700F956D7 /* EventInfoCell.h */,
+				CB46374A190D9BB700F956D7 /* EventInfoCell.m */,
 				CB1620C61904B6640044BAF3 /* EventPeopleCell.h */,
 				CB1620C51904B6640044BAF3 /* EventPeopleCell.m */,
 				CB1620C91904B6640044BAF3 /* EventAboutCell.h */,
 				CB1620C71904B6640044BAF3 /* EventAboutCell.m */,
 				CBFE0C321905AC53002F8587 /* EventMeetingsCell.h */,
 				CBFE0C331905AC53002F8587 /* EventMeetingsCell.m */,
+				CB463746190D99CB00F956D7 /* EventMailCell.h */,
+				CB463747190D99CB00F956D7 /* EventMailCell.m */,
+				CB46374C190D9EA600F956D7 /* EventNotesCell.h */,
+				CB46374D190D9EA600F956D7 /* EventNotesCell.m */,
 			);
 			name = "Event View";
 			sourceTree = "<group>";
@@ -433,13 +448,16 @@
 				7D681FAA1903823500359535 /* UIButton+WebCache.m in Sources */,
 				7D681FAC1903823500359535 /* UIImage+MultiFormat.m in Sources */,
 				7D681FAE1903823500359535 /* UIImageView+WebCache.m in Sources */,
+				CB46374E190D9EA600F956D7 /* EventNotesCell.m in Sources */,
 				CBD889D319034F4C00379E93 /* main.m in Sources */,
 				7D681FA71903823500359535 /* SDWebImageDownloaderOperation.m in Sources */,
 				7D681FAB1903823500359535 /* UIImage+GIF.m in Sources */,
+				CB46374B190D9BB700F956D7 /* EventInfoCell.m in Sources */,
 				CBFE0C3019056FA7002F8587 /* PeopleListView.m in Sources */,
 				CB1620CB1904B6650044BAF3 /* EventPeopleCell.m in Sources */,
 				7D681FA41903823500359535 /* SDWebImageCompat.m in Sources */,
 				7D681FA21903823500359535 /* NSData+ImageContentType.m in Sources */,
+				CB463748190D99CB00F956D7 /* EventMailCell.m in Sources */,
 				7DB6156A190358E7000F46C0 /* EventsCell.m in Sources */,
 				CB1620CA1904B6640044BAF3 /* EventViewController.m in Sources */,
 				7D681FA11903823500359535 /* MKAnnotationView+WebCache.m in Sources */,
