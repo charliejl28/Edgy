@@ -12,6 +12,7 @@
 #import "EventPeopleCell.h"
 #import "EventMeetingsCell.h"
 #import "EventMailCell.h"
+#import "EventNotesCell.h"
 
 @interface EventViewController ()
 
@@ -72,7 +73,7 @@ typedef enum {
 # pragma mark - Table View Data
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-	return 4;
+	return 5;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -127,7 +128,13 @@ typedef enum {
 		}break;
 			
 		case EventTableSectionNotes:{
+			NSString *CellIdentifier = @"EventNotesCell";
 			
+			EventNotesCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+			if (cell == nil) {
+				cell = [[EventNotesCell alloc] init];
+			}
+			return cell;
 		}break;
 			
 		case EventTableSectionNews:{
@@ -159,6 +166,11 @@ typedef enum {
 		case EventTableSectionMail:
 			return 120;
 			break;
+			
+		case EventTableSectionNotes:
+			return 120;
+			break;
+			
 		default:
 			break;
 	}
