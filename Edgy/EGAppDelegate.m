@@ -7,7 +7,9 @@
 //
 
 #import "EGAppDelegate.h"
+#import "MainViewController.h"
 #import "Constants.h"
+#import "AFHTTPRequestOperationManager.h"
 
 @implementation EGAppDelegate
 
@@ -17,9 +19,10 @@
 	
 	// view controller
 	self.eventsViewController = [[EventsViewController alloc] init];
-	
+    MainViewController *mvc = [[MainViewController alloc] init];
+
 	// nav
-	self.mainNav = [[UINavigationController alloc] initWithRootViewController:self.eventsViewController];
+	self.mainNav = [[UINavigationController alloc] initWithRootViewController:mvc];
 	self.mainNav.navigationBar.translucent = NO;
 	self.mainNav.navigationBar.barTintColor = edgyBlue;
     self.mainNav.navigationBar.barStyle = UIBarStyleBlack;
@@ -30,6 +33,8 @@
 
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
+    
+
 	// launch window
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.window.rootViewController = self.mainNav;
@@ -38,7 +43,7 @@
 
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
 	// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
