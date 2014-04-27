@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EventInfoCell.h"
 
-@interface EventMeetingsCell : UITableViewCell
-
-@property (nonatomic, retain) UILabel* titleLabel;
-
+@interface EventMeetingsCell : EventInfoCell
 
 @end

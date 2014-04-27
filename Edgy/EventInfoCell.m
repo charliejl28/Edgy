@@ -1,14 +1,14 @@
 //
-//  EventMeetingsCell.m
+//  EventInfoCell.m
 //  Edgy
 //
-//  Created by Charlie Jacobson on 4/21/14.
+//  Created by Charlie Jacobson on 4/27/14.
 //  Copyright (c) 2014 Edgy. All rights reserved.
 //
 
-#import "EventMeetingsCell.h"
+#import "EventInfoCell.h"
 
-@implementation EventMeetingsCell
+@implementation EventInfoCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -16,8 +16,14 @@
     if (self) {
         // Initialization code
 		
+		// background
+		self.backgroundColor = [UIColor whiteColor];
+		
 		// title
-		self.titleLabel.text = @"Meetings";
+		self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 15, self.frame.size.width - 40, 30)];
+		self.titleLabel.text = @"More Info";
+		self.titleLabel.textAlignment = NSTextAlignmentCenter;
+		[self addSubview:self.titleLabel];
     }
     return self;
 }

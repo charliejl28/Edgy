@@ -17,12 +17,10 @@
     if (self) {
         // Initialization code
 		
-		self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, self.frame.size.width - 40, 35)];
+		// Title
 		self.titleLabel.text = @"People Attending";
-		self.titleLabel.textAlignment = NSTextAlignmentCenter;
-		self.titleLabel.font = [UIFont fontWithName:APPFONT size:16];
-		[self addSubview:self.titleLabel];
 		
+		// People List
 		self.peopleListView = [[PeopleListView alloc] initWithFrame:CGRectMake(20, 55, self.frame.size.width - 10, 45) AndPeopleSize:35];
 		self.peopleListView.horizontalSpacing = 10;
 		NSString *fbID = @"1482513166";
