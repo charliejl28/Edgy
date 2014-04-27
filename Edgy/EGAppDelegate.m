@@ -7,7 +7,6 @@
 //
 
 #import "EGAppDelegate.h"
-#import "MainViewController.h"
 #import "Constants.h"
 #import "AFHTTPRequestOperationManager.h"
 
@@ -19,7 +18,7 @@
 	
 	// view controller
 	self.eventsViewController = [[EventsViewController alloc] init];
-    MainViewController *mvc = [[MainViewController alloc] init];
+    LoginViewController *mvc = [[LoginViewController alloc] init];
 
 	// nav
 	self.mainNav = [[UINavigationController alloc] initWithRootViewController:mvc];
@@ -71,4 +70,14 @@
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+# pragma mark - Log In
+- (void)didLogInSuccessfullyWithUsername:(NSString *)username
+{
+	[self.mainNav setViewControllers:[NSArray arrayWithObject:self.eventsViewController] animated:YES];
+}
+
+- (void)failedLogIn
+{
+	
+}
 @end
