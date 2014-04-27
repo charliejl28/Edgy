@@ -23,11 +23,24 @@ NSString *scope = @"https://www.googleapis.com/auth/userinfo.profile+https://www
 @implementation LoginViewController
 @synthesize webview,isLogin,isReader;
 
+- (id)init
+{
+	self = [super init];
+	if (self) {
+		self.title = @"Log in with Google";
+	
+	}
+	return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     NSString *url = [NSString stringWithFormat:@"https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=%@&redirect_uri=%@&scope=%@",client_id,callback,scope];
-    webview = [[UIWebView alloc] initWithFrame:self.view.frame];
+	CGRect frame = self.view.frame;
+    frame.size.height -= [[self navigationController] navigationBar].frame.size.height + self.navigationController.navigationBar.frame.origin.y;
+    
+    webview = [[UIWebView alloc] initWithFrame:frame];
     webview.delegate = self;
     [self.view addSubview:webview];
     [webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
