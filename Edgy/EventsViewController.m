@@ -129,8 +129,6 @@
         [cell addPersonForFacebookID:fbID3 AndName:@"Charlie"];
         [cell.badgeCountNews setHidden:NO];
         [cell.badgeCountNews setText:@"3"];
-        
-     
     }
     else if (indexPath.row == 3){
         [cell.title setText:@"Meeting with Google PM"];
