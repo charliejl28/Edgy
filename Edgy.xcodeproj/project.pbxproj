@@ -40,7 +40,7 @@
 		7DDC831D190D973100090793 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC8313190D973100090793 /* AFURLResponseSerialization.m */; };
 		7DDC831E190D973100090793 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC8315190D973100090793 /* AFURLSessionManager.m */; };
 		7DDC8321190DB06300090793 /* MeetingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC8320190DB06300090793 /* MeetingView.m */; };
-		7DDC8324190DCA2F00090793 /* MeetingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC8323190DCA2F00090793 /* MeetingList.m */; };
+		7DDC8324190DCA2F00090793 /* HorizontalListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC8323190DCA2F00090793 /* HorizontalListView.m */; };
 		CB1620CA1904B6640044BAF3 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1620C41904B6640044BAF3 /* EventViewController.m */; };
 		CB1620CB1904B6650044BAF3 /* EventPeopleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1620C51904B6640044BAF3 /* EventPeopleCell.m */; };
 		CB1620CC1904B6650044BAF3 /* EventAboutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1620C71904B6640044BAF3 /* EventAboutCell.m */; };
@@ -138,8 +138,8 @@
 		7DDC8315190D973100090793 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		7DDC831F190DB06300090793 /* MeetingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingView.h; sourceTree = "<group>"; };
 		7DDC8320190DB06300090793 /* MeetingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingView.m; sourceTree = "<group>"; };
-		7DDC8322190DCA2F00090793 /* MeetingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingList.h; sourceTree = "<group>"; };
-		7DDC8323190DCA2F00090793 /* MeetingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingList.m; sourceTree = "<group>"; };
+		7DDC8322190DCA2F00090793 /* HorizontalListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalListView.h; sourceTree = "<group>"; };
+		7DDC8323190DCA2F00090793 /* HorizontalListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalListView.m; sourceTree = "<group>"; };
 		CB1620C41904B6640044BAF3 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
 		CB1620C51904B6640044BAF3 /* EventPeopleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventPeopleCell.m; sourceTree = "<group>"; };
 		CB1620C61904B6640044BAF3 /* EventPeopleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventPeopleCell.h; sourceTree = "<group>"; };
@@ -348,8 +348,8 @@
 				CBD889DC19034F4C00379E93 /* EGViewController.m */,
 				CBFE0C2E19056FA7002F8587 /* PeopleListView.h */,
 				CBFE0C2F19056FA7002F8587 /* PeopleListView.m */,
-				7DDC8322190DCA2F00090793 /* MeetingList.h */,
-				7DDC8323190DCA2F00090793 /* MeetingList.m */,
+				7DDC8322190DCA2F00090793 /* HorizontalListView.h */,
+				7DDC8323190DCA2F00090793 /* HorizontalListView.m */,
 				7DDC831F190DB06300090793 /* MeetingView.h */,
 				7DDC8320190DB06300090793 /* MeetingView.m */,
 				CBFE0C3119056FCE002F8587 /* Events Table */,
@@ -515,7 +515,7 @@
 				7DDC831D190D973100090793 /* AFURLResponseSerialization.m in Sources */,
 				7DDC8300190D96DF00090793 /* LoginViewController.m in Sources */,
 				CBD889FF190351FF00379E93 /* EventsViewController.m in Sources */,
-				7DDC8324190DCA2F00090793 /* MeetingList.m in Sources */,
+				7DDC8324190DCA2F00090793 /* HorizontalListView.m in Sources */,
 				CBFE0C341905AC53002F8587 /* EventMeetingsCell.m in Sources */,
 				7D681FA51903823500359535 /* SDWebImageDecoder.m in Sources */,
 				7DDC831B190D973100090793 /* AFURLConnectionOperation.m in Sources */,
