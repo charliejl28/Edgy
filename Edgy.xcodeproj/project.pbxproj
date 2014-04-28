@@ -40,7 +40,10 @@
 		7DDC831D190D973100090793 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC8313190D973100090793 /* AFURLResponseSerialization.m */; };
 		7DDC831E190D973100090793 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC8315190D973100090793 /* AFURLSessionManager.m */; };
 		7DDC8321190DB06300090793 /* MeetingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC8320190DB06300090793 /* MeetingView.m */; };
-		7DDC8324190DCA2F00090793 /* HorizontalListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC8323190DCA2F00090793 /* HorizontalListView.m */; };
+		7DDC8324190DCA2F00090793 /* MeetingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC8323190DCA2F00090793 /* MeetingList.m */; };
+		7DDC8327190DCB6700090793 /* MailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC8326190DCB6700090793 /* MailView.m */; };
+		7DDC832A190DCDDB00090793 /* NewsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC8329190DCDDB00090793 /* NewsView.m */; };
+		7DDC832D190DCEAB00090793 /* NotesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC832C190DCEAB00090793 /* NotesView.m */; };
 		CB1620CA1904B6640044BAF3 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1620C41904B6640044BAF3 /* EventViewController.m */; };
 		CB1620CB1904B6650044BAF3 /* EventPeopleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1620C51904B6640044BAF3 /* EventPeopleCell.m */; };
 		CB1620CC1904B6650044BAF3 /* EventAboutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1620C71904B6640044BAF3 /* EventAboutCell.m */; };
@@ -138,8 +141,14 @@
 		7DDC8315190D973100090793 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		7DDC831F190DB06300090793 /* MeetingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingView.h; sourceTree = "<group>"; };
 		7DDC8320190DB06300090793 /* MeetingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingView.m; sourceTree = "<group>"; };
-		7DDC8322190DCA2F00090793 /* HorizontalListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalListView.h; sourceTree = "<group>"; };
-		7DDC8323190DCA2F00090793 /* HorizontalListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalListView.m; sourceTree = "<group>"; };
+		7DDC8322190DCA2F00090793 /* MeetingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingList.h; sourceTree = "<group>"; };
+		7DDC8323190DCA2F00090793 /* MeetingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingList.m; sourceTree = "<group>"; };
+		7DDC8325190DCB6700090793 /* MailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailView.h; sourceTree = "<group>"; };
+		7DDC8326190DCB6700090793 /* MailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailView.m; sourceTree = "<group>"; };
+		7DDC8328190DCDDB00090793 /* NewsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsView.h; sourceTree = "<group>"; };
+		7DDC8329190DCDDB00090793 /* NewsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsView.m; sourceTree = "<group>"; };
+		7DDC832B190DCEAB00090793 /* NotesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesView.h; sourceTree = "<group>"; };
+		7DDC832C190DCEAB00090793 /* NotesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesView.m; sourceTree = "<group>"; };
 		CB1620C41904B6640044BAF3 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
 		CB1620C51904B6640044BAF3 /* EventPeopleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventPeopleCell.m; sourceTree = "<group>"; };
 		CB1620C61904B6640044BAF3 /* EventPeopleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventPeopleCell.h; sourceTree = "<group>"; };
@@ -352,6 +361,12 @@
 				7DDC8323190DCA2F00090793 /* HorizontalListView.m */,
 				7DDC831F190DB06300090793 /* MeetingView.h */,
 				7DDC8320190DB06300090793 /* MeetingView.m */,
+				7DDC8325190DCB6700090793 /* MailView.h */,
+				7DDC8326190DCB6700090793 /* MailView.m */,
+				7DDC8328190DCDDB00090793 /* NewsView.h */,
+				7DDC8329190DCDDB00090793 /* NewsView.m */,
+				7DDC832B190DCEAB00090793 /* NotesView.h */,
+				7DDC832C190DCEAB00090793 /* NotesView.m */,
 				CBFE0C3119056FCE002F8587 /* Events Table */,
 				CBC64A471903843A005CED6E /* Event View */,
 				CBD889DE19034F4C00379E93 /* Images.xcassets */,
@@ -506,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB46374F190DA9DD00F956D7 /* EventInfoCell.m in Sources */,
+				7DDC832A190DCDDB00090793 /* NewsView.m in Sources */,
 				CB463750190DA9DD00F956D7 /* EventNotesCell.m in Sources */,
 				7DDC8316190D973100090793 /* AFHTTPRequestOperation.m in Sources */,
 				CBD889DD19034F4C00379E93 /* EGViewController.m in Sources */,
@@ -540,7 +556,9 @@
 				7D681FA41903823500359535 /* SDWebImageCompat.m in Sources */,
 				7D681FA21903823500359535 /* NSData+ImageContentType.m in Sources */,
 				CB463748190D99CB00F956D7 /* EventMailCell.m in Sources */,
+				7DDC8327190DCB6700090793 /* MailView.m in Sources */,
 				7DB6156A190358E7000F46C0 /* EventsCell.m in Sources */,
+				7DDC832D190DCEAB00090793 /* NotesView.m in Sources */,
 				CB1620CA1904B6640044BAF3 /* EventViewController.m in Sources */,
 				7D681FA11903823500359535 /* MKAnnotationView+WebCache.m in Sources */,
 				7D681FA31903823500359535 /* SDImageCache.m in Sources */,
