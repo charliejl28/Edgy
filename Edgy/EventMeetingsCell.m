@@ -7,6 +7,7 @@
 //
 
 #import "EventMeetingsCell.h"
+#import "MeetingView.h"
 
 @implementation EventMeetingsCell
 
@@ -18,6 +19,15 @@
 		
 		// title
 		self.titleLabel.text = @"Meetings";
+		
+		// meetings list
+		self.meetingsList = [[HorizontalListView alloc] initWithFrame:CGRectMake(0, 50, self.frame.size.width, 100)];
+		
+		for (int i = 0; i < 3; i++) {
+			MeetingView* mv = [[MeetingView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+			[self.meetingsList addItem:mv];
+		}
+		[self addSubview:self.meetingsList];
     }
     return self;
 }

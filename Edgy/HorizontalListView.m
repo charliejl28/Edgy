@@ -17,7 +17,7 @@ const int DEFAULT_MAX_ITEMS = 3;
 const float DEFAULT_LEFT_PADDING = 20;
 const float DEFAULT_TOP_PADDING = 20;
 
-- (id)initWithFrame: (CGRect) frame AndPeopleSize: (float) size
+- (id)initWithFrame: (CGRect) frame
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -42,11 +42,12 @@ const float DEFAULT_TOP_PADDING = 20;
 		x += itemView.frame.size.width;
 		x += self.horizontalSpacing;
 	}
+	NSLog(@"x coord: %f", x);
 	
 	CGRect frame = viewItem.frame;
 	frame.origin.x = x;
 	frame.origin.y = DEFAULT_TOP_PADDING;
-	
+	viewItem.frame = frame;
 	[self addSubview:viewItem];
 	[self.viewItems addObject:viewItem];
 }

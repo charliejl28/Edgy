@@ -114,6 +114,7 @@ typedef enum {
 			if (cell == nil) {
 				cell = [[EventMeetingsCell alloc] init];
 			}
+			
 			return cell;
 		}break;
 			
@@ -160,7 +161,7 @@ typedef enum {
 			break;
 			
 		case EventTableSectionMeetings:
-			return 120;
+			return 200;
 			break;
 			
 		case EventTableSectionMail:

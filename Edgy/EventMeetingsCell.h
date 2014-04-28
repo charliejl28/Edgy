@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "EventInfoCell.h"
+#import "HorizontalListView.h"
 
 @interface EventMeetingsCell : EventInfoCell
+
+@property (nonatomic, retain) HorizontalListView* meetingsList;
 
 @end
