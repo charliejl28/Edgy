@@ -40,7 +40,6 @@
 		7DDC831D190D973100090793 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC8313190D973100090793 /* AFURLResponseSerialization.m */; };
 		7DDC831E190D973100090793 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC8315190D973100090793 /* AFURLSessionManager.m */; };
 		7DDC8321190DB06300090793 /* MeetingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC8320190DB06300090793 /* MeetingView.m */; };
-		7DDC8324190DCA2F00090793 /* MeetingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC8323190DCA2F00090793 /* MeetingList.m */; };
 		7DDC8327190DCB6700090793 /* MailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC8326190DCB6700090793 /* MailView.m */; };
 		7DDC832A190DCDDB00090793 /* NewsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC8329190DCDDB00090793 /* NewsView.m */; };
 		7DDC832D190DCEAB00090793 /* NotesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC832C190DCEAB00090793 /* NotesView.m */; };
@@ -50,6 +49,7 @@
 		CB463748190D99CB00F956D7 /* EventMailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB463747190D99CB00F956D7 /* EventMailCell.m */; };
 		CB46374F190DA9DD00F956D7 /* EventInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46374A190D9BB700F956D7 /* EventInfoCell.m */; };
 		CB463750190DA9DD00F956D7 /* EventNotesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46374D190D9EA600F956D7 /* EventNotesCell.m */; };
+		CB463753190DD44200F956D7 /* HorizontalListView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB463751190DD44200F956D7 /* HorizontalListView.m */; };
 		CBD889C719034F4C00379E93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD889C619034F4C00379E93 /* Foundation.framework */; };
 		CBD889C919034F4C00379E93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD889C819034F4C00379E93 /* CoreGraphics.framework */; };
 		CBD889CB19034F4C00379E93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD889CA19034F4C00379E93 /* UIKit.framework */; };
@@ -161,6 +161,8 @@
 		CB46374A190D9BB700F956D7 /* EventInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventInfoCell.m; sourceTree = "<group>"; };
 		CB46374C190D9EA600F956D7 /* EventNotesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventNotesCell.h; sourceTree = "<group>"; };
 		CB46374D190D9EA600F956D7 /* EventNotesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventNotesCell.m; sourceTree = "<group>"; };
+		CB463751190DD44200F956D7 /* HorizontalListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HorizontalListView.m; path = Edgy/HorizontalListView.m; sourceTree = "<group>"; };
+		CB463752190DD44200F956D7 /* HorizontalListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HorizontalListView.h; path = Edgy/HorizontalListView.h; sourceTree = "<group>"; };
 		CBD889C319034F4C00379E93 /* Edgy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edgy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD889C619034F4C00379E93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CBD889C819034F4C00379E93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -314,6 +316,8 @@
 		CBD889BA19034F4B00379E93 = {
 			isa = PBXGroup;
 			children = (
+				CB463751190DD44200F956D7 /* HorizontalListView.m */,
+				CB463752190DD44200F956D7 /* HorizontalListView.h */,
 				7DDC8302190D973100090793 /* AFNetworking */,
 				CBD889CC19034F4C00379E93 /* Edgy */,
 				CBD889EB19034F4D00379E93 /* EdgyTests */,
@@ -357,8 +361,8 @@
 				CBD889DC19034F4C00379E93 /* EGViewController.m */,
 				CBFE0C2E19056FA7002F8587 /* PeopleListView.h */,
 				CBFE0C2F19056FA7002F8587 /* PeopleListView.m */,
-				7DDC8322190DCA2F00090793 /* HorizontalListView.h */,
-				7DDC8323190DCA2F00090793 /* HorizontalListView.m */,
+				7DDC8322190DCA2F00090793 /* MeetingList.h */,
+				7DDC8323190DCA2F00090793 /* MeetingList.m */,
 				7DDC831F190DB06300090793 /* MeetingView.h */,
 				7DDC8320190DB06300090793 /* MeetingView.m */,
 				7DDC8325190DCB6700090793 /* MailView.h */,
@@ -531,7 +535,6 @@
 				7DDC831D190D973100090793 /* AFURLResponseSerialization.m in Sources */,
 				7DDC8300190D96DF00090793 /* LoginViewController.m in Sources */,
 				CBD889FF190351FF00379E93 /* EventsViewController.m in Sources */,
-				7DDC8324190DCA2F00090793 /* HorizontalListView.m in Sources */,
 				CBFE0C341905AC53002F8587 /* EventMeetingsCell.m in Sources */,
 				7D681FA51903823500359535 /* SDWebImageDecoder.m in Sources */,
 				7DDC831B190D973100090793 /* AFURLConnectionOperation.m in Sources */,
@@ -547,6 +550,7 @@
 				7DDC831A190D973100090793 /* AFSecurityPolicy.m in Sources */,
 				CBD889D319034F4C00379E93 /* main.m in Sources */,
 				7D681FA71903823500359535 /* SDWebImageDownloaderOperation.m in Sources */,
+				CB463753190DD44200F956D7 /* HorizontalListView.m in Sources */,
 				7DDC8319190D973100090793 /* AFNetworkReachabilityManager.m in Sources */,
 				7D681FAB1903823500359535 /* UIImage+GIF.m in Sources */,
 				7DDC8318190D973100090793 /* AFHTTPSessionManager.m in Sources */,
