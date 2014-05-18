@@ -9,53 +9,70 @@
 #import "NotesView.h"
 #import "Constants.h"
 @implementation NotesView
-@synthesize titleLabel, timeLabel, subjectLabel;
+@synthesize icon;
+@synthesize titleLabel, timeLabel;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
+		
+		// starting values
         float yPos = 5;
-        float xPos = 0;
-        float width = self.frame.size.width;
+        float xPos = 5;
+        float width = self.frame.size.width-xPos*2;
         
-        float timeLabelWidth = 60;
-        
-        
-        float titleHeight = 30;
-        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(xPos, yPos, width, titleHeight)];
+		// vertical spacing
+		float iconHeight = frame.size.height*.6;
+		float iconPadding = 3;
+		iconHeight -= iconPadding*2;
+		float subjectHeight = frame.size.height*.2;
+		float dateHeight = frame.size.height*.2;
+		
+		// horizontal spacing
+		float iconWidth = frame.size.width/2.0;
+		float iconX = (frame.size.width-iconWidth)/2.0;
+		
+		// border
+		[self.layer setBorderColor:borderColor.CGColor];
+        [self.layer setBorderWidth:1];
+		
+		// background
+		self.backgroundColor = [UIColor whiteColor];
+		
+		// icon
+//		UIView* iconPlaceholder = [[UIView alloc] initWithFrame:CGRectMake(iconX, yPos, iconWidth, iconHeight)];
+//		[iconPlaceholder.layer setBorderColor:[UIColor blackColor].CGColor];
+//		[iconPlaceholder.layer setBorderWidth:1];
+//		[self addSubview:iconPlaceholder];
+//		yPos += iconHeight;
+//		yPos += iconPadding;
+		
+        self.icon = [[UIImageView alloc] initWithFrame:CGRectMake(iconX, yPos, iconWidth, iconHeight)];
+        UIImage *notesIcon = [UIImage imageNamed:@"notes.png"];
+        [self.icon setImage:notesIcon];
+		[self addSubview:self.icon];
+        yPos += iconHeight;
+		yPos += iconPadding;
+		
+        // subject
+		titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(xPos, yPos, width, subjectHeight)];
         [titleLabel setFont:[UIFont fontWithName:APPFONT size:14]];
         [titleLabel setTextColor:darkGray];
-        [titleLabel setBackgroundColor:[UIColor clearColor]];
         [titleLabel setTextAlignment:NSTextAlignmentCenter];
-        [titleLabel setText:@"this is a title "];
-        
+        [titleLabel setBackgroundColor:[UIColor clearColor]];
+        [titleLabel setText:@"Pitch Planning"];
         [self addSubview:titleLabel];
+		yPos += subjectHeight;
         
-        yPos += titleHeight;
-        
-        
-        float subjectHeight = 40;
-        subjectLabel = [[UILabel alloc] initWithFrame:CGRectMake(xPos, yPos, width - timeLabelWidth, subjectHeight)];
-        [subjectLabel setFont:[UIFont fontWithName:APPFONT size:14]];
-        [subjectLabel setTextColor:darkGray];
-        [subjectLabel setTextAlignment:NSTextAlignmentCenter];
-        [subjectLabel setBackgroundColor:[UIColor clearColor]];
-        [subjectLabel setText:@"this is a subject"];
-        [self addSubview:subjectLabel];
-        
-        
-        float timeLabelHeight = 20;
-        timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(width - timeLabelWidth, yPos, timeLabelWidth, timeLabelHeight)];
+        // time
+        timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(xPos, yPos, width, dateHeight)];
         [timeLabel setFont:[UIFont fontWithName:APPFONT size:11]];
-        [timeLabel setTextColor:darkGray];
+        [timeLabel setTextColor:alizarinColor];
         [timeLabel setTextAlignment:NSTextAlignmentCenter];
         [timeLabel setBackgroundColor:[UIColor clearColor]];
-        
-        [timeLabel setText:@"7:20A"];
+        [timeLabel setText:@"Yesterday"];
         [self addSubview:timeLabel];
-        
-        
         
         
     }

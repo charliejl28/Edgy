@@ -10,8 +10,10 @@
 
 @interface NotesView : UIView
 
+
+@property (nonatomic, retain) UIImageView* icon;
 @property (nonatomic, retain) UILabel* titleLabel;
-@property (nonatomic, retain) UILabel* subjectLabel;
+//@property (nonatomic, retain) UILabel* subjectLabel;
 @property (nonatomic, retain) UILabel* timeLabel;
 
 @end

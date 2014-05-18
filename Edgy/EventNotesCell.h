@@ -8,6 +8,10 @@
 
 #import "EventInfoCell.h"
 
+@class HorizontalListView;
+
 @interface EventNotesCell : EventInfoCell
+
+@property (nonatomic, retain) HorizontalListView* notesList;
 
 @end
