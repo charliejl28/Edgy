@@ -58,6 +58,7 @@
 		CB9FDC631928BC1900875A6F /* EGDateObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FDC621928BC1900875A6F /* EGDateObject.m */; };
 		CB9FDC661928BC8700875A6F /* EGNote.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FDC651928BC8700875A6F /* EGNote.m */; };
 		CB9FDC691928BD0B00875A6F /* EGNews.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FDC681928BD0B00875A6F /* EGNews.m */; };
+		CB9FDC6C1928BDB000875A6F /* EGEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FDC6B1928BDB000875A6F /* EGEventManager.m */; };
 		CBB6DA8D19287B030038D296 /* PersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB6DA8C19287B030038D296 /* PersonView.m */; };
 		CBD889C719034F4C00379E93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD889C619034F4C00379E93 /* Foundation.framework */; };
 		CBD889C919034F4C00379E93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD889C819034F4C00379E93 /* CoreGraphics.framework */; };
@@ -188,6 +189,8 @@
 		CB9FDC651928BC8700875A6F /* EGNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGNote.m; sourceTree = "<group>"; };
 		CB9FDC671928BD0B00875A6F /* EGNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGNews.h; sourceTree = "<group>"; };
 		CB9FDC681928BD0B00875A6F /* EGNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGNews.m; sourceTree = "<group>"; };
+		CB9FDC6A1928BDB000875A6F /* EGEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGEventManager.h; sourceTree = "<group>"; };
+		CB9FDC6B1928BDB000875A6F /* EGEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGEventManager.m; sourceTree = "<group>"; };
 		CBB6DA8B19287B030038D296 /* PersonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonView.h; sourceTree = "<group>"; };
 		CBB6DA8C19287B030038D296 /* PersonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonView.m; sourceTree = "<group>"; };
 		CBD889C319034F4C00379E93 /* Edgy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edgy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -379,6 +382,15 @@
 			name = "Data Models";
 			sourceTree = "<group>";
 		};
+		CB9FDC6D1928BDBF00875A6F /* Data Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CB9FDC6A1928BDB000875A6F /* EGEventManager.h */,
+				CB9FDC6B1928BDB000875A6F /* EGEventManager.m */,
+			);
+			name = "Data Managers";
+			sourceTree = "<group>";
+		};
 		CBC64A471903843A005CED6E /* Event View */ = {
 			isa = PBXGroup;
 			children = (
@@ -442,6 +454,7 @@
 				CBD889D519034F4C00379E93 /* EGAppDelegate.h */,
 				CBD889D619034F4C00379E93 /* EGAppDelegate.m */,
 				CB9FDC5D1928BA8200875A6F /* Data Models */,
+				CB9FDC6D1928BDBF00875A6F /* Data Managers */,
 				CB9FDC531928B73800875A6F /* Home View Controller */,
 				CBD889D819034F4C00379E93 /* Main.storyboard */,
 				CBD889DB19034F4C00379E93 /* EGViewController.h */,
@@ -605,6 +618,7 @@
 				7DDC832A190DCDDB00090793 /* NewsView.m in Sources */,
 				CB9FDC601928BB6700875A6F /* EGMail.m in Sources */,
 				CB463750190DA9DD00F956D7 /* EventNotesCell.m in Sources */,
+				CB9FDC6C1928BDB000875A6F /* EGEventManager.m in Sources */,
 				7DDC8316190D973100090793 /* AFHTTPRequestOperation.m in Sources */,
 				CB9FDC631928BC1900875A6F /* EGDateObject.m in Sources */,
 				CBD889DD19034F4C00379E93 /* EGViewController.m in Sources */,
