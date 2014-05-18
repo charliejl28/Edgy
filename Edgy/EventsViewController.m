@@ -10,6 +10,7 @@
 #import "EventsCell.h"
 #import "Constants.h"
 #import "EventViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation EventsViewController
 
@@ -43,6 +44,10 @@
     // Do any additional setup after loading the view from its nib.
 
 	// Background
+	
+	// test speech
+	UIBarButtonItem* testSppeech = [[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStylePlain target:self action:@selector(testSpeech)];
+	self.navigationItem.rightBarButtonItem = testSppeech;
 
 	// Table View
     CGRect frame = self.view.frame;
@@ -167,6 +172,15 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 175;
+}
+
+- (void) testSpeech
+{
+	AVSpeechUtterance *utterance = [AVSpeechUtterance
+									speechUtteranceWithString:@"Hi Darshan, would you like to prepare for your day?"];
+	utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
+	AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
+	[synth speakUtterance:utterance];
 }
 
 # pragma mark - Table View Delegate
