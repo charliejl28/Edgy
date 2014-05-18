@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "EventInfoCell.h"
 
+@class HorizontalListView;
+
 @interface EventMailCell : EventInfoCell
+
+@property (nonatomic, retain) HorizontalListView* mailList;
+
 
 @end

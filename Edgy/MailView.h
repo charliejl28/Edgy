@@ -11,10 +11,11 @@
 @interface MailView : UIView
 
 
-@property (nonatomic, retain) UILabel* titleLabel;
-@property (nonatomic, retain) UILabel* timeLabel;
+@property (nonatomic, retain) UILabel* fromLabel;
 @property (nonatomic, retain) UILabel* subjectLabel;
 @property (nonatomic, retain) UILabel* previewLabel;
+@property (nonatomic, retain) UILabel* timeLabel;
+
 
 
 

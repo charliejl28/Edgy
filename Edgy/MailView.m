@@ -9,64 +9,69 @@
 #import "MailView.h"
 #import "Constants.h"
 @implementation MailView
-@synthesize titleLabel, timeLabel, previewLabel, subjectLabel;
+@synthesize fromLabel, timeLabel, previewLabel, subjectLabel;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         float yPos = 5;
-        float xPos = 0;
-        float width = self.frame.size.width;
+        float xPos = 5;
+        float width = self.frame.size.width - xPos*2;
+        		
+		// vertical sizing
+		float previewHeight = frame.size.height*.4;
+		float fromHeight = frame.size.height*.2;
+		float subjectHeight = frame.size.height*.2;
+		float dateHeight = frame.size.height*.2;
+		
+		// border
+		[self.layer setBorderColor:borderColor.CGColor];
+        [self.layer setBorderWidth:1];
+		
+		// background
+		self.backgroundColor = [UIColor whiteColor];
         
-        float timeLabelWidth = 60;
-        
-        float subjectHeight = 20;
-        subjectLabel = [[UILabel alloc] initWithFrame:CGRectMake(xPos, yPos, width - timeLabelWidth, subjectHeight)];
-        [subjectLabel setFont:[UIFont fontWithName:APPFONT size:14]];
+		// from label
+		self.fromLabel = [[UILabel alloc] initWithFrame:CGRectMake(xPos, yPos, width, fromHeight)];
+        [self.fromLabel setFont:[UIFont fontWithName:APPFONT_Bold size:14]];
+        [self.fromLabel setTextColor:darkGray];
+        [self.fromLabel setBackgroundColor:[UIColor clearColor]];
+        [self.fromLabel setTextAlignment:NSTextAlignmentLeft];
+        [self.fromLabel setText:@"Charlie Jacobson"];
+		[self addSubview:self.fromLabel];
+		yPos += fromHeight;
+		
+		// subject label
+        subjectLabel = [[UILabel alloc] initWithFrame:CGRectMake(xPos, yPos, width, subjectHeight)];
+        [subjectLabel setFont:[UIFont fontWithName:APPFONT size:13]];
         [subjectLabel setTextColor:darkGray];
-        [subjectLabel setTextAlignment:NSTextAlignmentCenter];
+        [subjectLabel setTextAlignment:NSTextAlignmentLeft];
         [subjectLabel setBackgroundColor:[UIColor clearColor]];
-        [subjectLabel setText:@"this is a subject"];
+        [subjectLabel setText:@"Final Edgy Slides"];
         [self addSubview:subjectLabel];
-        
-        
-        float timeLabelHeight = 20;
-        timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(width - timeLabelWidth, yPos, timeLabelWidth, timeLabelHeight)];
+		yPos += subjectHeight;
+		
+		// preview label
+		previewLabel = [[UILabel alloc] initWithFrame:CGRectMake(xPos, yPos, width, previewHeight)];
+        [previewLabel setFont:[UIFont fontWithName:APPFONT size:13]];
+        [previewLabel setTextColor:darkGray];
+        [previewLabel setTextAlignment:NSTextAlignmentLeft];
+        [previewLabel setBackgroundColor:[UIColor clearColor]];
+		[previewLabel setNumberOfLines:2];
+        [previewLabel setText:@"Hey Darsh! Here are the final slides for tomorrow's pitch. Super pumped. SF here we come."];
+        [self addSubview:previewLabel];
+        yPos += previewHeight;
+		
+		// time label
+		timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(xPos, yPos-2, width, dateHeight)];
         [timeLabel setFont:[UIFont fontWithName:APPFONT size:11]];
-        [timeLabel setTextColor:darkGray];
+        [timeLabel setTextColor:alizarinColor];
         [timeLabel setTextAlignment:NSTextAlignmentCenter];
         [timeLabel setBackgroundColor:[UIColor clearColor]];
-        
-        [timeLabel setText:@"7:20A"];
+        [timeLabel setText:@"Yesterday"];
         [self addSubview:timeLabel];
         
-        
-        yPos += subjectHeight;
-        
-        float titleHeight = 30;
-        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(xPos, yPos, width, titleHeight)];
-        [titleLabel setFont:[UIFont fontWithName:APPFONT size:14]];
-        [titleLabel setTextColor:darkGray];
-        [titleLabel setBackgroundColor:[UIColor clearColor]];
-        [titleLabel setTextAlignment:NSTextAlignmentCenter];
-        [titleLabel setText:@"this is a title "];
-        
-        [self addSubview:titleLabel];
-        
-        yPos += titleHeight;
-        
-
-        float previewHeight = 15;
-        previewLabel = [[UILabel alloc] initWithFrame:CGRectMake(xPos, yPos, width, previewHeight)];
-        [previewLabel setFont:[UIFont fontWithName:APPFONT size:11]];
-        [previewLabel setTextColor:darkGray];
-        [previewLabel setTextAlignment:NSTextAlignmentCenter];
-        [previewLabel setBackgroundColor:[UIColor clearColor]];
-        
-        [previewLabel setText:@"This is a message preview"];
-        [self addSubview:previewLabel];
-
 
     }
     return self;
