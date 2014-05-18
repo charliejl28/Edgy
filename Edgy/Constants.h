@@ -43,6 +43,7 @@
 /////// Fonts //////////
 # pragma mark - Fonts
 #define APPFONT @"Avenir"
+#define APPFONT_Bold @"Avenir-Bold"
 
 
 //Button Font Size
