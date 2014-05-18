@@ -9,6 +9,7 @@
 #import "EGAppDelegate.h"
 #import "Constants.h"
 #import "AFHTTPRequestOperationManager.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation EGAppDelegate
 
@@ -26,6 +27,10 @@
 	self.mainNav.navigationBar.translucent = NO;
 	self.mainNav.navigationBar.barTintColor = edgyBlue;
     self.mainNav.navigationBar.barStyle = UIBarStyleBlack;
+	
+	// test speech
+	UIBarButtonItem* testSppeech = [[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStylePlain target:self action:@selector(testSpeech)];
+	self.mainNav.navigationItem.rightBarButtonItem = testSppeech;
 
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, [UIFont fontWithName:APPFONT size:16], NSFontAttributeName, nil]];
     

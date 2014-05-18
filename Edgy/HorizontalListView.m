@@ -14,8 +14,8 @@
 
 const float DEFAULT_HORIZONTAL_SPACING = 5;
 const int DEFAULT_MAX_ITEMS = 3;
-const float DEFAULT_LEFT_PADDING = 20;
-const float DEFAULT_TOP_PADDING = 20;
+const float DEFAULT_LEFT_PADDING = 0;
+const float DEFAULT_TOP_PADDING = 0;
 
 - (id)initWithFrame: (CGRect) frame
 {
