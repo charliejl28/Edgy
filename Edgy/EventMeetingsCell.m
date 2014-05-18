@@ -20,8 +20,13 @@
 		// title
 		self.titleLabel.text = @"Meetings";
 		
+		// background
+		self.backgroundColor = [UIColor clearColor];
+		
 		// meetings list
-		self.meetingsList = [[HorizontalListView alloc] initWithFrame:CGRectMake(0, 50, self.frame.size.width, 100)];
+		float meetingsListY = self.titleLabel.frame.origin.y + self.titleLabel.frame.size.height + 5;
+		self.meetingsList = [[HorizontalListView alloc] initWithFrame:CGRectMake(5, meetingsListY, self.frame.size.width, 100)];
+//		self.meetingsList.backgroundColor = [UIColor redColor];
 		
 		for (int i = 0; i < 3; i++) {
 			MeetingView* mv = [[MeetingView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];

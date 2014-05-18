@@ -11,7 +11,7 @@
 @interface MeetingView : UIView
 
 @property (nonatomic, retain) UILabel* titleLabel;
-@property (nonatomic, retain) UILabel* timeLabel;
+//@property (nonatomic, retain) UILabel* timeLabel;
 @property (nonatomic, retain) UILabel* locationLabel;
 @property (nonatomic, retain) UILabel* calendarMonth;
 @property (nonatomic, retain) UILabel* calendarDate;
