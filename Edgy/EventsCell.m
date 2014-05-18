@@ -86,13 +86,14 @@ float peopleSize = 25;
         [backgroundView addSubview:locationOuter];
         
         yPos += locationOuterHeight;
-        yPos += 10;
+        yPos += 2;
 
 //        peopleOuter = [[UIView alloc] initWithFrame:CGRectMake(leftOffset, yPos, self.contentView.bounds.size.width - leftOffset, 30)];
 //        [peopleOuter setBackgroundColor:[UIColor clearColor]];
 //        [backgroundView addSubview:peopleOuter];
         
-		self.peopleListView = [[PeopleListView alloc] initWithFrame:CGRectMake(leftOffset, yPos, self.contentView.bounds.size.width - leftOffset, 30)];
+		self.peopleListView = [[PeopleListView alloc] initWithFrame:CGRectMake(leftOffset, yPos, self.contentView.bounds.size.width - leftOffset, 43) AndPersonWidth:50];
+		self.peopleListView.nameFontSize = 11;
 		[backgroundView addSubview:self.peopleListView];
 		
     

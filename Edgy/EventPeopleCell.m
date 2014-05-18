@@ -21,7 +21,8 @@
 		self.titleLabel.text = @"People Attending";
 		
 		// People List
-		self.peopleListView = [[PeopleListView alloc] initWithFrame:CGRectMake(20, 55, self.frame.size.width - 10, 45) AndPeopleSize:35];
+		self.peopleListView = [[PeopleListView alloc] initWithFrame:CGRectMake(10, 40, self.frame.size.width - 20, 80) AndPersonWidth:60];
+		self.peopleListView.nameFontSize = 13;
 		self.peopleListView.horizontalSpacing = 10;
 		NSString *fbID = @"1482513166";
 		[self.peopleListView addPersonForFacebookID:fbID AndName:@"Darshan"];

@@ -8,19 +8,23 @@
 
 #import "PeopleListView.h"
 #import "UIImageView+WebCache.h"
+#import "PersonView.h"
 
 @implementation PeopleListView
 
-const float defaultPeopleSize = 25;
+const float defaultPeopleSize = 30;
 const float defaultHorizontalSpacing = 5;
 
-- (id)initWithFrame: (CGRect) frame AndPeopleSize: (float) size
+@synthesize nameFontSize;
+
+- (id)initWithFrame: (CGRect) frame AndPersonWidth: (float) size
 {
 	self = [super initWithFrame:frame];
 	if (self) {
 		
 		// save size
 		self.peopleSize = size;
+		self.personSize = CGSizeMake(self.peopleSize, frame.size.height);
 		self.horizontalSpacing = defaultHorizontalSpacing;
 		
 		// background
@@ -35,7 +39,7 @@ const float defaultHorizontalSpacing = 5;
 }
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [self initWithFrame:frame AndPeopleSize:defaultPeopleSize];
+    self = [self initWithFrame:frame AndPersonWidth:defaultPeopleSize];
     if (self) {
         // Initialization code
     }
@@ -62,12 +66,18 @@ const float defaultHorizontalSpacing = 5;
 }
 
 - (void)addPersonForFacebookID:(NSString *)fbID AndName:(NSString *)firstName{
-    UIImageView *fbPicture = [[UIImageView alloc] init];
-    [fbPicture setImageWithURL: [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=square", fbID]]];
-    fbPicture.clipsToBounds = YES;
-    fbPicture.layer.cornerRadius = self.peopleSize/2;
-    
-    [self addPersonforImage:fbPicture AndName:firstName];
+//    UIImageView *fbPicture = [[UIImageView alloc] init];
+//    [fbPicture setImageWithURL: [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=square", fbID]]];
+//    fbPicture.clipsToBounds = YES;
+//    fbPicture.layer.cornerRadius = self.peopleSize/2;
+//    
+//    [self addPersonforImage:fbPicture AndName:firstName];
+	CGRect frame = CGRectMake(self.people.count * (self.peopleSize + self.horizontalSpacing), 0, self.personSize.width, self.personSize.height);
+	
+	PersonView* personView = [[PersonView alloc] initWithFrame:frame Name:firstName FacebookID:fbID];
+	personView.nameFontSize = self.nameFontSize;
+	[self.people addObject:personView];
+	[self addSubview:personView];
 }
 
 @end
