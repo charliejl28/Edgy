@@ -13,13 +13,17 @@
 
 @implementation EGAppDelegate
 
+@synthesize homeViewController;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
 	
-	// view controller
+	// view controllers
 	self.eventsViewController = [[EventsViewController alloc] init];
+	self.homeViewController = [[EGHomeViewController alloc] init];
     LoginViewController *mvc = [[LoginViewController alloc] init];
+	mvc.view.backgroundColor = peterriverColor;
     mvc.delegate = self;
 
 	// nav
@@ -29,8 +33,8 @@
     self.mainNav.navigationBar.barStyle = UIBarStyleBlack;
 	
 	// test speech
-	UIBarButtonItem* testSppeech = [[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStylePlain target:self action:@selector(testSpeech)];
-	self.mainNav.navigationItem.rightBarButtonItem = testSppeech;
+//	UIBarButtonItem* testSppeech = [[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStylePlain target:self action:@selector(testSpeech)];
+//	self.mainNav.navigationItem.rightBarButtonItem = testSppeech;
 
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, [UIFont fontWithName:APPFONT size:16], NSFontAttributeName, nil]];
     
@@ -79,7 +83,7 @@
 # pragma mark - Log In
 - (void)didLogInSuccessfullyWithUsername:(NSString *)username
 {
-	[self.mainNav setViewControllers:[NSArray arrayWithObject:self.eventsViewController] animated:YES];
+	[self.mainNav setViewControllers:[NSArray arrayWithObject:self.homeViewController] animated:YES];
 }
 
 - (void)failedLogIn
