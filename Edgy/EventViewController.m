@@ -62,6 +62,9 @@ typedef enum {
 	self.tableView.dataSource = self;
 	self.tableView.backgroundColor = bgColor;
 	[self.view addSubview:self.tableView];
+	
+	// no separater
+	self.tableView.separatorColor = [UIColor clearColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -157,19 +160,19 @@ typedef enum {
 			break;
 			
 		case EventTableSectionPeople:
-			return 120;
+			return 125;
 			break;
 			
 		case EventTableSectionMeetings:
-			return 200;
+			return 140;
 			break;
 			
 		case EventTableSectionMail:
-			return 120;
+			return 150;
 			break;
 			
 		case EventTableSectionNotes:
-			return 120;
+			return 130;
 			break;
 			
 		default:

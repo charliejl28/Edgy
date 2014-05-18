@@ -20,7 +20,7 @@
 		self.backgroundColor = [UIColor whiteColor];
 		
 		// title
-		self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 15, self.frame.size.width - 40, 30)];
+		self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 5, self.frame.size.width - 40, 30)];
 		self.titleLabel.text = @"More Info";
 		self.titleLabel.textAlignment = NSTextAlignmentCenter;
 		[self addSubview:self.titleLabel];
