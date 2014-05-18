@@ -50,6 +50,14 @@
 		CB46374F190DA9DD00F956D7 /* EventInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46374A190D9BB700F956D7 /* EventInfoCell.m */; };
 		CB463750190DA9DD00F956D7 /* EventNotesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46374D190D9EA600F956D7 /* EventNotesCell.m */; };
 		CB463753190DD44200F956D7 /* HorizontalListView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB463751190DD44200F956D7 /* HorizontalListView.m */; };
+		CB9FDC501928B04300875A6F /* EGHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FDC4F1928B04300875A6F /* EGHomeViewController.m */; };
+		CB9FDC561928B76200875A6F /* EGEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FDC551928B76200875A6F /* EGEvent.m */; };
+		CB9FDC591928B88C00875A6F /* FSAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FDC581928B88C00875A6F /* FSAddress.m */; };
+		CB9FDC5C1928BA7B00875A6F /* EGContact.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FDC5B1928BA7B00875A6F /* EGContact.m */; };
+		CB9FDC601928BB6700875A6F /* EGMail.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FDC5F1928BB6700875A6F /* EGMail.m */; };
+		CB9FDC631928BC1900875A6F /* EGDateObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FDC621928BC1900875A6F /* EGDateObject.m */; };
+		CB9FDC661928BC8700875A6F /* EGNote.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FDC651928BC8700875A6F /* EGNote.m */; };
+		CB9FDC691928BD0B00875A6F /* EGNews.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FDC681928BD0B00875A6F /* EGNews.m */; };
 		CBB6DA8D19287B030038D296 /* PersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB6DA8C19287B030038D296 /* PersonView.m */; };
 		CBD889C719034F4C00379E93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD889C619034F4C00379E93 /* Foundation.framework */; };
 		CBD889C919034F4C00379E93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD889C819034F4C00379E93 /* CoreGraphics.framework */; };
@@ -162,8 +170,24 @@
 		CB46374A190D9BB700F956D7 /* EventInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventInfoCell.m; sourceTree = "<group>"; };
 		CB46374C190D9EA600F956D7 /* EventNotesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventNotesCell.h; sourceTree = "<group>"; };
 		CB46374D190D9EA600F956D7 /* EventNotesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventNotesCell.m; sourceTree = "<group>"; };
-		CB463751190DD44200F956D7 /* HorizontalListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HorizontalListView.m; path = Edgy/HorizontalListView.m; sourceTree = "<group>"; };
-		CB463752190DD44200F956D7 /* HorizontalListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HorizontalListView.h; path = Edgy/HorizontalListView.h; sourceTree = "<group>"; };
+		CB463751190DD44200F956D7 /* HorizontalListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalListView.m; sourceTree = "<group>"; };
+		CB463752190DD44200F956D7 /* HorizontalListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalListView.h; sourceTree = "<group>"; };
+		CB9FDC4E1928B04200875A6F /* EGHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGHomeViewController.h; sourceTree = "<group>"; };
+		CB9FDC4F1928B04300875A6F /* EGHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGHomeViewController.m; sourceTree = "<group>"; };
+		CB9FDC541928B76200875A6F /* EGEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGEvent.h; sourceTree = "<group>"; };
+		CB9FDC551928B76200875A6F /* EGEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGEvent.m; sourceTree = "<group>"; };
+		CB9FDC571928B88C00875A6F /* FSAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAddress.h; sourceTree = "<group>"; };
+		CB9FDC581928B88C00875A6F /* FSAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAddress.m; sourceTree = "<group>"; };
+		CB9FDC5A1928BA7B00875A6F /* EGContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGContact.h; sourceTree = "<group>"; };
+		CB9FDC5B1928BA7B00875A6F /* EGContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGContact.m; sourceTree = "<group>"; };
+		CB9FDC5E1928BB6700875A6F /* EGMail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGMail.h; sourceTree = "<group>"; };
+		CB9FDC5F1928BB6700875A6F /* EGMail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGMail.m; sourceTree = "<group>"; };
+		CB9FDC611928BC1900875A6F /* EGDateObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGDateObject.h; sourceTree = "<group>"; };
+		CB9FDC621928BC1900875A6F /* EGDateObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGDateObject.m; sourceTree = "<group>"; };
+		CB9FDC641928BC8700875A6F /* EGNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGNote.h; sourceTree = "<group>"; };
+		CB9FDC651928BC8700875A6F /* EGNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGNote.m; sourceTree = "<group>"; };
+		CB9FDC671928BD0B00875A6F /* EGNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGNews.h; sourceTree = "<group>"; };
+		CB9FDC681928BD0B00875A6F /* EGNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGNews.m; sourceTree = "<group>"; };
 		CBB6DA8B19287B030038D296 /* PersonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonView.h; sourceTree = "<group>"; };
 		CBB6DA8C19287B030038D296 /* PersonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonView.m; sourceTree = "<group>"; };
 		CBD889C319034F4C00379E93 /* Edgy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edgy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -295,6 +319,66 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		CB9FDC511928B6D600875A6F /* Item Views */ = {
+			isa = PBXGroup;
+			children = (
+				CBB6DA8B19287B030038D296 /* PersonView.h */,
+				CBB6DA8C19287B030038D296 /* PersonView.m */,
+				7DDC8322190DCA2F00090793 /* MeetingList.h */,
+				7DDC8323190DCA2F00090793 /* MeetingList.m */,
+				7DDC831F190DB06300090793 /* MeetingView.h */,
+				7DDC8320190DB06300090793 /* MeetingView.m */,
+				7DDC8325190DCB6700090793 /* MailView.h */,
+				7DDC8326190DCB6700090793 /* MailView.m */,
+				7DDC8328190DCDDB00090793 /* NewsView.h */,
+				7DDC8329190DCDDB00090793 /* NewsView.m */,
+				7DDC832B190DCEAB00090793 /* NotesView.h */,
+				7DDC832C190DCEAB00090793 /* NotesView.m */,
+			);
+			name = "Item Views";
+			sourceTree = "<group>";
+		};
+		CB9FDC521928B72C00875A6F /* List Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB463752190DD44200F956D7 /* HorizontalListView.h */,
+				CB463751190DD44200F956D7 /* HorizontalListView.m */,
+				CBFE0C2E19056FA7002F8587 /* PeopleListView.h */,
+				CBFE0C2F19056FA7002F8587 /* PeopleListView.m */,
+			);
+			name = "List Views";
+			sourceTree = "<group>";
+		};
+		CB9FDC531928B73800875A6F /* Home View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CB9FDC4E1928B04200875A6F /* EGHomeViewController.h */,
+				CB9FDC4F1928B04300875A6F /* EGHomeViewController.m */,
+			);
+			name = "Home View Controller";
+			sourceTree = "<group>";
+		};
+		CB9FDC5D1928BA8200875A6F /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB9FDC611928BC1900875A6F /* EGDateObject.h */,
+				CB9FDC621928BC1900875A6F /* EGDateObject.m */,
+				CB9FDC541928B76200875A6F /* EGEvent.h */,
+				CB9FDC551928B76200875A6F /* EGEvent.m */,
+				CB9FDC571928B88C00875A6F /* FSAddress.h */,
+				CB9FDC581928B88C00875A6F /* FSAddress.m */,
+				CB9FDC5A1928BA7B00875A6F /* EGContact.h */,
+				CB9FDC5B1928BA7B00875A6F /* EGContact.m */,
+				CB9FDC5E1928BB6700875A6F /* EGMail.h */,
+				CB9FDC5F1928BB6700875A6F /* EGMail.m */,
+				CB9FDC641928BC8700875A6F /* EGNote.h */,
+				CB9FDC651928BC8700875A6F /* EGNote.m */,
+				CB9FDC671928BD0B00875A6F /* EGNews.h */,
+				CB9FDC681928BD0B00875A6F /* EGNews.m */,
+			);
+			name = "Data Models";
+			sourceTree = "<group>";
+		};
 		CBC64A471903843A005CED6E /* Event View */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,8 +403,6 @@
 		CBD889BA19034F4B00379E93 = {
 			isa = PBXGroup;
 			children = (
-				CB463752190DD44200F956D7 /* HorizontalListView.h */,
-				CB463751190DD44200F956D7 /* HorizontalListView.m */,
 				7DDC8302190D973100090793 /* AFNetworking */,
 				CBD889CC19034F4C00379E93 /* Edgy */,
 				CBD889EB19034F4D00379E93 /* EdgyTests */,
@@ -359,23 +441,13 @@
 				CBD889FB1903517100379E93 /* Constants.h */,
 				CBD889D519034F4C00379E93 /* EGAppDelegate.h */,
 				CBD889D619034F4C00379E93 /* EGAppDelegate.m */,
+				CB9FDC5D1928BA8200875A6F /* Data Models */,
+				CB9FDC531928B73800875A6F /* Home View Controller */,
 				CBD889D819034F4C00379E93 /* Main.storyboard */,
 				CBD889DB19034F4C00379E93 /* EGViewController.h */,
 				CBD889DC19034F4C00379E93 /* EGViewController.m */,
-				CBFE0C2E19056FA7002F8587 /* PeopleListView.h */,
-				CBFE0C2F19056FA7002F8587 /* PeopleListView.m */,
-				CBB6DA8B19287B030038D296 /* PersonView.h */,
-				CBB6DA8C19287B030038D296 /* PersonView.m */,
-				7DDC8322190DCA2F00090793 /* MeetingList.h */,
-				7DDC8323190DCA2F00090793 /* MeetingList.m */,
-				7DDC831F190DB06300090793 /* MeetingView.h */,
-				7DDC8320190DB06300090793 /* MeetingView.m */,
-				7DDC8325190DCB6700090793 /* MailView.h */,
-				7DDC8326190DCB6700090793 /* MailView.m */,
-				7DDC8328190DCDDB00090793 /* NewsView.h */,
-				7DDC8329190DCDDB00090793 /* NewsView.m */,
-				7DDC832B190DCEAB00090793 /* NotesView.h */,
-				7DDC832C190DCEAB00090793 /* NotesView.m */,
+				CB9FDC521928B72C00875A6F /* List Views */,
+				CB9FDC511928B6D600875A6F /* Item Views */,
 				CBFE0C3119056FCE002F8587 /* Events Table */,
 				CBC64A471903843A005CED6E /* Event View */,
 				CBD889DE19034F4C00379E93 /* Images.xcassets */,
@@ -531,8 +603,10 @@
 			files = (
 				CB46374F190DA9DD00F956D7 /* EventInfoCell.m in Sources */,
 				7DDC832A190DCDDB00090793 /* NewsView.m in Sources */,
+				CB9FDC601928BB6700875A6F /* EGMail.m in Sources */,
 				CB463750190DA9DD00F956D7 /* EventNotesCell.m in Sources */,
 				7DDC8316190D973100090793 /* AFHTTPRequestOperation.m in Sources */,
+				CB9FDC631928BC1900875A6F /* EGDateObject.m in Sources */,
 				CBD889DD19034F4C00379E93 /* EGViewController.m in Sources */,
 				7DDC8321190DB06300090793 /* MeetingView.m in Sources */,
 				7D681FAD1903823500359535 /* UIImage+WebP.m in Sources */,
@@ -542,10 +616,13 @@
 				7DDC8300190D96DF00090793 /* LoginViewController.m in Sources */,
 				CBD889FF190351FF00379E93 /* EventsViewController.m in Sources */,
 				CBFE0C341905AC53002F8587 /* EventMeetingsCell.m in Sources */,
+				CB9FDC661928BC8700875A6F /* EGNote.m in Sources */,
 				7D681FA51903823500359535 /* SDWebImageDecoder.m in Sources */,
+				CB9FDC5C1928BA7B00875A6F /* EGContact.m in Sources */,
 				7DDC831B190D973100090793 /* AFURLConnectionOperation.m in Sources */,
 				7DDC8317190D973100090793 /* AFHTTPRequestOperationManager.m in Sources */,
 				7D681FA61903823500359535 /* SDWebImageDownloader.m in Sources */,
+				CB9FDC501928B04300875A6F /* EGHomeViewController.m in Sources */,
 				CB1620CC1904B6650044BAF3 /* EventAboutCell.m in Sources */,
 				CBD889D719034F4C00379E93 /* EGAppDelegate.m in Sources */,
 				7D681FA81903823500359535 /* SDWebImageManager.m in Sources */,
@@ -556,16 +633,19 @@
 				7DDC831A190D973100090793 /* AFSecurityPolicy.m in Sources */,
 				CBD889D319034F4C00379E93 /* main.m in Sources */,
 				7D681FA71903823500359535 /* SDWebImageDownloaderOperation.m in Sources */,
+				CB9FDC561928B76200875A6F /* EGEvent.m in Sources */,
 				CB463753190DD44200F956D7 /* HorizontalListView.m in Sources */,
 				7DDC8319190D973100090793 /* AFNetworkReachabilityManager.m in Sources */,
 				7D681FAB1903823500359535 /* UIImage+GIF.m in Sources */,
 				7DDC8318190D973100090793 /* AFHTTPSessionManager.m in Sources */,
 				7DDC831C190D973100090793 /* AFURLRequestSerialization.m in Sources */,
 				CBFE0C3019056FA7002F8587 /* PeopleListView.m in Sources */,
+				CB9FDC691928BD0B00875A6F /* EGNews.m in Sources */,
 				CB1620CB1904B6650044BAF3 /* EventPeopleCell.m in Sources */,
 				7D681FA41903823500359535 /* SDWebImageCompat.m in Sources */,
 				7D681FA21903823500359535 /* NSData+ImageContentType.m in Sources */,
 				CB463748190D99CB00F956D7 /* EventMailCell.m in Sources */,
+				CB9FDC591928B88C00875A6F /* FSAddress.m in Sources */,
 				7DDC8327190DCB6700090793 /* MailView.m in Sources */,
 				7DB6156A190358E7000F46C0 /* EventsCell.m in Sources */,
 				7DDC832D190DCEAB00090793 /* NotesView.m in Sources */,
